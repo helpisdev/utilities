@@ -13,12 +13,16 @@ environment:
 dependencies:
   accessibility_tools: ^0.2.0
   adaptive_scaffold:
-    path: packages/adaptive_scaffold
+    git:
+      url: https://github.com/helpisdev/adaptive_scaffold.git
+      ref: main
   app_links: ^3.4.2
   autoequal: ^0.5.1
   collection: ^1.17.1
   context_menu:
-    path: packages/context_menu
+    git:
+      url: https://github.com/helpisdev/context_menu.git
+      ref: main
   crypto: ^3.0.2
   equatable: ^2.0.5
   flutter:
