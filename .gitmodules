@@ -1,0 +1,6 @@
+[submodule "packages/context_menu"]
+	path = packages/context_menu
+	url = https://github.com/helpisdev/context_menu.git
+[submodule "packages/adaptive_scaffold"]
+	path = packages/adaptive_scaffold
+	url = https://github.com/helpisdev/adaptive_scaffold.git

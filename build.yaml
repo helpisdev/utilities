@@ -1,0 +1,13 @@
+targets:
+  $default:
+    builders:
+    sources:
+      - ./*
+      - $package$
+      - $lib$
+      - $lib$/**
+      - lib/**
+      - pubspec.yaml
+      - web/**
+    dependencies:
+      - autoequal
