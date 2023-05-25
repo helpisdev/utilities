@@ -11,6 +11,31 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 Packages with breaking changes:
 
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`utilities` - `v0.3.0+1`](#utilities---v0301)
+
+---
+
+#### `utilities` - `v0.3.0+1`
+
+ - **FIX**(routing): Call GoRouteData.$location to parse location properly. ([40936031](https://github.com/helpisdev/utilities.git/commit/40936031a1994dd46008d5da9b5143061c06f021))
+
+## 0.3.0+1
+
+ - **FIX**(routing): Call GoRouteData.$location to parse location properly. ([40936031](https://github.com/helpisdev/utilities.git/commit/40936031a1994dd46008d5da9b5143061c06f021))
+
+
+## 2023-05-25
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
  - [`utilities` - `v0.3.0`](#utilities---v030)
 
 Packages with other changes:
