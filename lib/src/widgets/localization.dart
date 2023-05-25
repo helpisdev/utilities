@@ -221,3 +221,30 @@ class GlobalLocalizationsKey extends GlobalKey<_LocalizationsState> {
 }
 
 typedef LocaleName = String;
+
+/// The [ChangeLocalization] extension on [BuildContext] provides methods to
+/// change the locale and language.
+///
+/// - The [localizationsProvider] getter returns the [LocalizationsProvider] for
+///   the given [BuildContext].
+///
+/// - The [changeLocale] method requests a locale change using the
+///   [LocalizationsProvider.localizationsKey].
+///
+/// - The [changeLanguage] method requests a language change using the
+///   [LocalizationsProvider.localizationsKey].
+extension ChangeLocalization on BuildContext {
+  /// Returns the [LocalizationsProvider] for the given [BuildContext].
+  LocalizationsProvider get localizationsProvider =>
+      LocalizationsProvider.of(this);
+
+  /// Requests a locale change using the
+  /// [LocalizationsProvider.localizationsKey].
+  void changeLocale(final Locale locale) =>
+      localizationsProvider.changeLocale(locale);
+
+  /// Requests a language change using the
+  /// [LocalizationsProvider.localizationsKey].
+  void changeLanguage(final Language language) =>
+      localizationsProvider.changeLanguage(language);
+}
