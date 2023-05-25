@@ -15,6 +15,33 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`utilities` - `v0.3.0+2`](#utilities---v0302)
+
+---
+
+#### `utilities` - `v0.3.0+2`
+
+ - **FIX**(routing): Remove @literal annotation as it was wrongly applied. ([930dd0b9](https://github.com/helpisdev/utilities.git/commit/930dd0b972094cf2013a0e4bcfccc0cb24c4bd4c))
+ - **FIX**(routing): Add call to super(). ([2d7ec469](https://github.com/helpisdev/utilities.git/commit/2d7ec4691305b4b50093c3c0e8cdabda07a1cc13))
+
+## 0.3.0+2
+
+ - **FIX**(routing): Remove @literal annotation as it was wrongly applied. ([930dd0b9](https://github.com/helpisdev/utilities.git/commit/930dd0b972094cf2013a0e4bcfccc0cb24c4bd4c))
+ - **FIX**(routing): Add call to super(). ([2d7ec469](https://github.com/helpisdev/utilities.git/commit/2d7ec4691305b4b50093c3c0e8cdabda07a1cc13))
+
+
+## 2023-05-25
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`utilities` - `v0.3.0+1`](#utilities---v0301)
 
 ---
