@@ -11,6 +11,35 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 Packages with breaking changes:
 
+ - [`utilities` - `v0.3.0`](#utilities---v030)
+
+Packages with other changes:
+
+ - There are no other changes in this release.
+
+---
+
+#### `utilities` - `v0.3.0`
+
+ - **FEAT**(routing): Export go_router. ([8195b1d9](https://github.com/helpisdev/utilities.git/commit/8195b1d9530a18ef8fe87f502351cf6d6612930e))
+ - **BREAKING** **FEAT**(routing): Add location parameter to screen route and extends BuildContext to provide the current ScreenRoute. ([f22573f0](https://github.com/helpisdev/utilities.git/commit/f22573f016110c27a577b45ef01ae3cbfe495ad6))
+
+## 0.3.0
+
+> Note: This release has breaking changes.
+
+ - **FEAT**(routing): Export go_router. ([8195b1d9](https://github.com/helpisdev/utilities.git/commit/8195b1d9530a18ef8fe87f502351cf6d6612930e))
+ - **BREAKING** **FEAT**(routing): Add location parameter to screen route and extends BuildContext to provide the current ScreenRoute. ([f22573f0](https://github.com/helpisdev/utilities.git/commit/f22573f016110c27a577b45ef01ae3cbfe495ad6))
+
+
+## 2023-05-25
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
  - There are no breaking changes in this release.
 
 Packages with other changes:
