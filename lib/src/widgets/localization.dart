@@ -75,6 +75,9 @@ class _LocalizationsState extends State<Localizations> {
   ///   widget.
   /// - The system locale if [Localizations.locale] is `null`.
   late Locale locale;
+
+  /// Specifies the currently active language. It is initialized to the language
+  /// corresponding to [locale].
   Language? language;
 
   @override
@@ -97,8 +100,9 @@ class _LocalizationsState extends State<Localizations> {
     );
   }
 
-  /// Updates the [language] and rebuilds the widget subtree. It is called when a
-  /// lang change is requested by descendant [LocalizationsProvider] widgets.
+  /// The [changeLanguage] method updates the [language] and rebuilds the widget
+  /// subtree. It is called when a language change is requested by descendant
+  /// [LocalizationsProvider] widgets.
   void changeLanguage(final Language language) {
     setState(
       () {
