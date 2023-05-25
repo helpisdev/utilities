@@ -11,6 +11,33 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 Packages with breaking changes:
 
+ - [`utilities` - `v0.4.0`](#utilities---v040)
+
+Packages with other changes:
+
+ - There are no other changes in this release.
+
+---
+
+#### `utilities` - `v0.4.0`
+
+ - **BREAKING** **FIX**(routing): Make return value of currentRoute nullable since there is currently no implementation that handles parameterized locations and remove the requirement that app routes should be equal to screen routes (this can be invalid in the new implementation). ([ab8df151](https://github.com/helpisdev/utilities.git/commit/ab8df151c9a679813185b7b4e7b290af65e3ef2c))
+
+## 0.4.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **FIX**(routing): Make return value of currentRoute nullable since there is currently no implementation that handles parameterized locations and remove the requirement that app routes should be equal to screen routes (this can be invalid in the new implementation). ([ab8df151](https://github.com/helpisdev/utilities.git/commit/ab8df151c9a679813185b7b4e7b290af65e3ef2c))
+
+
+## 2023-05-25
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
  - There are no breaking changes in this release.
 
 Packages with other changes:
