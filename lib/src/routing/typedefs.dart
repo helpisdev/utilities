@@ -97,6 +97,9 @@ abstract class ScreenRoute extends GoRouteData {
   /// The screen builder that returns a [Screen].
   abstract final RouteBuilder builder;
 
+  /// Screen's title.
+  String get title => throw UnimplementedError();
+
   @override
   Screen build(final BuildContext context, final GoRouterState state) =>
       builder(context, state);
