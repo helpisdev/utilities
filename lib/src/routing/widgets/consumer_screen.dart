@@ -16,8 +16,7 @@ import 'widgets.dart';
 ///
 /// This widget enforces its users to use a scaffold on their screen.
 @immutable
-@sealed
-class ConsumerScreen extends ConsumerScreenWidgetBuilder<ConsumerScreen> {
+final class ConsumerScreen extends ConsumerScreenWidgetBuilder<ConsumerScreen> {
   @literal
   const ConsumerScreen({
     required this.state,

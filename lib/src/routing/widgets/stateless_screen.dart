@@ -16,8 +16,8 @@ import 'widgets.dart';
 ///
 /// This widget enforces its users to use a scaffold on their screen.
 @immutable
-@sealed
-class StatelessScreen extends StatelessScreenWidgetBuilder<StatelessScreen> {
+final class StatelessScreen
+    extends StatelessScreenWidgetBuilder<StatelessScreen> {
   @literal
   const StatelessScreen({
     required this.state,
