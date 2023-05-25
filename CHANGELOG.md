@@ -11,6 +11,31 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 Packages with breaking changes:
 
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`utilities` - `v0.4.0+1`](#utilities---v0401)
+
+---
+
+#### `utilities` - `v0.4.0+1`
+
+ - **FIX**(routing): Add annotation to indicate that the generate function must be overridden by implementers of statefull screens. ([7b0f68f6](https://github.com/helpisdev/utilities.git/commit/7b0f68f6dfc9a271f1125ceb4f7abd40509ab808))
+
+## 0.4.0+1
+
+ - **FIX**(routing): Add annotation to indicate that the generate function must be overridden by implementers of statefull screens. ([7b0f68f6](https://github.com/helpisdev/utilities.git/commit/7b0f68f6dfc9a271f1125ceb4f7abd40509ab808))
+
+
+## 2023-05-25
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
  - [`utilities` - `v0.4.0`](#utilities---v040)
 
 Packages with other changes:
