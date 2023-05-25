@@ -75,14 +75,14 @@ class _LocalizationsState extends State<Localizations> {
   ///   widget.
   /// - The system locale if [Localizations.locale] is `null`.
   late Locale locale;
-  Language? lang;
+  Language? language;
 
   @override
   void initState() {
     super.initState();
     locale = widget.locale ??
         Locale(Intl.systemLocale.substring(0, Intl.systemLocale.indexOf('_')));
-    lang = Language.byLocale(locale);
+    language = Language.byLocale(locale);
   }
 
   /// Updates the [locale] and rebuilds the widget
@@ -92,18 +92,18 @@ class _LocalizationsState extends State<Localizations> {
     setState(
       () {
         this.locale = locale;
-        lang = Language.byLocale(locale);
+        language = Language.byLocale(locale);
       },
     );
   }
 
-  /// Updates the [lang] and rebuilds the widget subtree. It is called when a
+  /// Updates the [language] and rebuilds the widget subtree. It is called when a
   /// lang change is requested by descendant [LocalizationsProvider] widgets.
-  void switchLang(final Language lang) {
+  void switchLang(final Language language) {
     setState(
       () {
-        this.lang = lang;
-        locale = lang.locale;
+        this.language = language;
+        locale = language.locale;
       },
     );
   }
@@ -112,7 +112,7 @@ class _LocalizationsState extends State<Localizations> {
   Widget build(final BuildContext context) => LocalizationsProvider(
         localizationsKey: widget.key,
         locale: locale,
-        lang: lang,
+        language: language,
         child: widget.child,
       );
 
@@ -121,24 +121,19 @@ class _LocalizationsState extends State<Localizations> {
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty<Locale?>('locale', locale))
-      ..add(EnumProperty<Language?>('lang', lang));
+      ..add(EnumProperty<Language?>('language', language));
   }
 }
 
 /// The [LocalizationsProvider] widget provides localization to its descendants.
 ///
 /// - The [locale] parameter specifies the locale to use for localization.
-/// - The [lang] parameter specifies the language of the locale.
+/// - The [language] parameter specifies the language of the locale.
 /// - The [child] parameter specifies the widget subtree to provide localization
 ///   for.
 /// - The [localizationsKey] parameter specifies the [GlobalLocalizationsKey]
 ///   used to provide locale changes to descendant [LocalizationsProvider]
 ///   widgets.
-///
-/// - The [maybeLanguage] getter returns the [Language] for the [locale], if it
-///   exists. Otherwise, it returns `null`.
-/// - The [language] getter returns the [Language] for the [locale]. If the
-///   [locale] maps to an unknown language, an [UnsupportedError] is thrown.
 ///
 /// - The [maybeOf] static method returns the [LocalizationsProvider] for the
 ///   given [BuildContext], if it exists. Otherwise, it returns `null`.
@@ -157,7 +152,7 @@ class LocalizationsProvider extends InheritedWidget {
     required super.child,
     required this.locale,
     required this.localizationsKey,
-    this.lang,
+    this.language,
     super.key,
   });
 
@@ -165,24 +160,11 @@ class LocalizationsProvider extends InheritedWidget {
   final Locale locale;
 
   /// Specifies the language of the locale.
-  final Language? lang;
+  final Language? language;
 
   /// Specifies the [GlobalLocalizationsKey] used to provide locale changes to
   /// descendant [LocalizationsProvider] widgets.
   final GlobalLocalizationsKey localizationsKey;
-
-  /// Returns the [Language] for the [locale], if it exists. Otherwise, it
-  /// returns `null`.
-  Language? get maybeLanguage => Language.byLocale(locale);
-
-  /// Returns the [Language] for the [locale]. If the [locale] maps to an
-  /// unknown language, an [UnsupportedError] is thrown.
-  Language get language =>
-      maybeLanguage ??
-      (throw UnsupportedError(
-        'The current locale maps to an unknown language - consider making a '
-        'pull request to add support for `${locale.languageCode}`.',
-      ));
 
   /// Returns the [LocalizationsProvider] for the given [BuildContext], if it
   /// exists. Otherwise, it returns `null`.
@@ -204,9 +186,9 @@ class LocalizationsProvider extends InheritedWidget {
   }
 
   /// Requests a language change using the [localizationsKey].
-  void switchLang(final Language lang) {
+  void switchLang(final Language language) {
     final _LocalizationsState? currentState = localizationsKey.currentState;
-    currentState?.switchLang(lang);
+    currentState?.switchLang(language);
   }
 
   /// Returns `true` if the [locale] has changed, indicating the widget should
@@ -226,9 +208,7 @@ class LocalizationsProvider extends InheritedWidget {
           localizationsKey,
         ),
       )
-      ..add(EnumProperty<Language?>('language', language))
-      ..add(EnumProperty<Language?>('maybeLanguage', maybeLanguage))
-      ..add(EnumProperty<Language?>('lang', lang));
+      ..add(EnumProperty<Language?>('language', language));
   }
 }
 
