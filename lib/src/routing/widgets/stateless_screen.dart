@@ -3,7 +3,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:meta/meta.dart';
 
 import '../../utils/functions.dart';
 import '../typedefs.dart';
@@ -18,7 +17,6 @@ import 'widgets.dart';
 @immutable
 final class StatelessScreen
     extends StatelessScreenWidgetBuilder<StatelessScreen> {
-  @literal
   const StatelessScreen({
     required this.state,
     this.adaptiveScaffoldConfig,
@@ -118,7 +116,6 @@ final class StatelessScreen
 ///   [WidgetRef].
 @immutable
 abstract class StatelessScreenWidget extends StatelessWidget with Screen {
-  @literal
   const StatelessScreenWidget({super.key});
 }
 

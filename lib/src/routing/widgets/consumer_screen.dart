@@ -3,7 +3,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:meta/meta.dart';
 
 import '../../utils/functions.dart';
 import '../typedefs.dart';
@@ -17,7 +16,6 @@ import 'widgets.dart';
 /// This widget enforces its users to use a scaffold on their screen.
 @immutable
 final class ConsumerScreen extends ConsumerScreenWidgetBuilder<ConsumerScreen> {
-  @literal
   const ConsumerScreen({
     required this.state,
     this.adaptiveScaffoldConfig,
@@ -92,7 +90,6 @@ final class ConsumerScreen extends ConsumerScreenWidgetBuilder<ConsumerScreen> {
 /// Same as [StatelessScreenWidget], that can be used with Riverpod.
 @immutable
 abstract class ConsumerScreenWidget extends ConsumerWidget with Screen {
-  @literal
   const ConsumerScreenWidget({super.key});
 }
 
@@ -101,7 +98,6 @@ abstract class ConsumerScreenWidget extends ConsumerWidget with Screen {
 abstract class ConsumerScreenWidgetBuilder<
         T extends ConsumerScreenWidgetBuilder<T>> extends ConsumerScreenWidget
     implements ConsumerScreenBuilder, ScreenWidget<T> {
-  @literal
   const ConsumerScreenWidgetBuilder({super.key});
 
   @override

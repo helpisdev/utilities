@@ -18,7 +18,6 @@ import 'widgets.dart';
 @immutable
 class ConsumerStatefulScreen
     extends ConsumerStatefulScreenWidgetBuilder<ConsumerStatefulScreen> {
-  @literal
   const ConsumerStatefulScreen({
     required this.state,
     this.adaptiveScaffoldConfig,

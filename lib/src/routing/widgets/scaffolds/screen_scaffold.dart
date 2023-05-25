@@ -1,7 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:meta/meta.dart';
 
 import '../../typedefs.dart';
 
@@ -9,7 +8,6 @@ import '../../typedefs.dart';
 /// functionality other than enabling using a [Scaffold] as a [Screen].
 @immutable
 class ScreenScaffold extends Scaffold with Screen {
-  @literal
   const ScreenScaffold._({
     required this.state,
     super.appBar,

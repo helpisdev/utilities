@@ -17,7 +17,6 @@ import 'widgets.dart';
 /// This widget enforces its users to use a scaffold on their screen.
 @immutable
 class StatefulScreen extends StatefulScreenWidgetBuilder<StatefulScreen> {
-  @literal
   const StatefulScreen({
     required this.state,
     this.adaptiveScaffoldConfig,
@@ -124,7 +123,6 @@ class StatefulScreenState
 ///   [WidgetRef].
 @immutable
 abstract class StatefulScreenWidget extends StatefulWidget with Screen {
-  @literal
   const StatefulScreenWidget({super.key});
 }
 
@@ -154,7 +152,6 @@ abstract class ScreenState<T extends StatefulScreenWidget> extends State<T> {}
 abstract class StatefulScreenWidgetBuilder<
         T extends StatefulScreenWidgetBuilder<T>> extends StatefulScreenWidget
     implements ScreenWidget<T> {
-  @literal
   const StatefulScreenWidgetBuilder({super.key});
 
   @override

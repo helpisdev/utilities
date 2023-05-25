@@ -92,7 +92,6 @@ mixin ConsumerScreenBuilder {
 /// [Screen].
 @immutable
 abstract class ScreenRoute extends GoRouteData {
-  @literal
   const ScreenRoute(final String location)
       : _location = location,
         super();

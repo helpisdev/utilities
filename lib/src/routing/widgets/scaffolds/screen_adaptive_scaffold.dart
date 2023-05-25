@@ -3,7 +3,6 @@ import 'package:adaptive_scaffold/adaptive_scaffold.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:meta/meta.dart';
 
 import '../../typedefs.dart';
 
@@ -11,7 +10,6 @@ import '../../typedefs.dart';
 /// provided bodies with an [AccessibilityTools] checker.
 @immutable
 class ScreenAdaptiveScaffold extends StatelessWidget with Screen {
-  @literal
   const ScreenAdaptiveScaffold({
     required this.adaptiveScaffoldConfig,
     required this.state,
@@ -91,7 +89,6 @@ class ScreenAdaptiveScaffold extends StatelessWidget with Screen {
 ///   [GoRouterState] to the corresponding [WidgetBuilder].
 @immutable
 class GoRouterBodyConfig extends BodyConfig {
-  @literal
   const GoRouterBodyConfig({
     final WidgetBuilderWithGoRouterState? small,
     final WidgetBuilderWithGoRouterState? body,
@@ -183,7 +180,6 @@ class GoRouterBodyConfig extends BodyConfig {
 ///  * [GoRouterBodyConfig], which configures the body widget builders.
 @immutable
 class GoRouterAdaptiveScaffoldConfig extends AdaptiveScaffoldConfig {
-  @literal
   const GoRouterAdaptiveScaffoldConfig({
     required super.navigationRailConfig,
     final GoRouterBodyConfig? bodyConfig,
