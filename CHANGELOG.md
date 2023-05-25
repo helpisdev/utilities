@@ -11,6 +11,33 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 Packages with breaking changes:
 
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`utilities` - `v0.2.1`](#utilities---v021)
+
+---
+
+#### `utilities` - `v0.2.1`
+
+ - **REFACTOR**(routing): Remove @sealed annotation and make classes final now that Dart 3.0 supports it. ([f4c87594](https://github.com/helpisdev/utilities.git/commit/f4c8759470f6885c21b4872f8818e0f89b264ed6))
+ - **FEAT**(routing): Add an optional page title property for each screen route. ([0fb68cbd](https://github.com/helpisdev/utilities.git/commit/0fb68cbd6b086b79e3620a8f6abe0ac4e7305ec1))
+
+## 0.2.1
+
+ - **REFACTOR**(routing): Remove @sealed annotation and make classes final now that Dart 3.0 supports it. ([f4c87594](https://github.com/helpisdev/utilities.git/commit/f4c8759470f6885c21b4872f8818e0f89b264ed6))
+ - **FEAT**(routing): Add an optional page title property for each screen route. ([0fb68cbd](https://github.com/helpisdev/utilities.git/commit/0fb68cbd6b086b79e3620a8f6abe0ac4e7305ec1))
+
+
+## 2023-05-25
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
  - [`utilities` - `v0.2.0`](#utilities---v020)
 
 Packages with other changes:
