@@ -1,7 +1,7 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:meta/meta.dart';
 
 import 'router.dart';
 import 'widgets/widgets.dart';
@@ -110,8 +110,8 @@ abstract class ScreenRoute extends GoRouteData {
 }
 
 extension CurrentRoute on BuildContext {
-  ScreenRoute get currentRoute =>
-      UtilitiesRouter.of(this).screenRoutes.firstWhere(
+  ScreenRoute? get currentRoute =>
+      UtilitiesRouter.of(this).screenRoutes.firstWhereOrNull(
             (final ScreenRoute route) =>
                 GoRouteData.$location(route._location) ==
                 GoRouterState.of(this).location,
