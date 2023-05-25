@@ -114,6 +114,7 @@ extension CurrentRoute on BuildContext {
   ScreenRoute get currentRoute =>
       UtilitiesRouter.of(this).screenRoutes.firstWhere(
             (final ScreenRoute route) =>
-                route._location == GoRouterState.of(this).location,
+                GoRouteData.$location(route._location) ==
+                GoRouterState.of(this).location,
           );
 }
