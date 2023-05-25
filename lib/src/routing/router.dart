@@ -19,10 +19,11 @@ class UtilitiesRouter extends GoRouter {
     super.debugLogDiagnostics,
     super.navigatorKey,
     super.restorationScopeId,
-  }) : assert(
+  })  : assert(
           screenRoutes.length == routes.length,
           'routes and screenRoutes should be equal in length.',
-        );
+        ),
+        super();
 
   final Set<ScreenRoute> screenRoutes;
 
