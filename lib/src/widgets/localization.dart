@@ -62,7 +62,7 @@ class Localizations extends StatefulWidget {
 /// - The [Localizations.locale] parameter passed to the [Localizations] widget.
 /// - The system locale if [Localizations.locale] is `null`.
 ///
-/// The [switchLanguage] method updates the [locale] and rebuilds the widget
+/// The [switchLocale] method updates the [locale] and rebuilds the widget
 /// subtree. It is called when a locale change is requested by descendant
 /// [LocalizationsProvider] widgets.
 ///
@@ -75,37 +75,60 @@ class _LocalizationsState extends State<Localizations> {
   ///   widget.
   /// - The system locale if [Localizations.locale] is `null`.
   late Locale locale;
+  Language? lang;
 
   @override
   void initState() {
     super.initState();
     locale = widget.locale ??
         Locale(Intl.systemLocale.substring(0, Intl.systemLocale.indexOf('_')));
+    lang = Language.byLocale(locale);
   }
 
   /// Updates the [locale] and rebuilds the widget
   /// subtree. It is called when a locale change is requested by descendant
   /// [LocalizationsProvider] widgets.
-  void switchLanguage(final Locale locale) =>
-      setState(() => this.locale = locale);
+  void switchLocale(final Locale locale) {
+    setState(
+      () {
+        this.locale = locale;
+        lang = Language.byLocale(locale);
+      },
+    );
+  }
+
+  /// Updates the [lang] and rebuilds the widget subtree. It is called when a
+  /// lang change is requested by descendant [LocalizationsProvider] widgets.
+  void switchLang(final Language lang) {
+    setState(
+      () {
+        this.lang = lang;
+        locale = lang.locale;
+      },
+    );
+  }
 
   @override
   Widget build(final BuildContext context) => LocalizationsProvider(
         localizationsKey: widget.key,
         locale: locale,
+        lang: lang,
         child: widget.child,
       );
 
   @override
   void debugFillProperties(final DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty<Locale?>('locale', locale));
+    properties
+      ..add(DiagnosticsProperty<Locale?>('locale', locale))
+      ..add(EnumProperty<Language?>('lang', lang));
   }
 }
 
 /// The [LocalizationsProvider] widget provides localization to its descendants.
 ///
 /// - The [locale] parameter specifies the locale to use for localization.
+/// - The [lang] parameter specifies the language of the locale.
 /// - The [child] parameter specifies the widget subtree to provide localization
 ///   for.
 /// - The [localizationsKey] parameter specifies the [GlobalLocalizationsKey]
@@ -123,7 +146,9 @@ class _LocalizationsState extends State<Localizations> {
 ///   [BuildContext]. If no [LocalizationsProvider] is found, an
 ///   [AssertionError] is thrown.
 ///
-/// - The [switchLanguage] method requests a locale change using the
+/// - The [switchLocale] method requests a locale change using the
+///   [localizationsKey].
+/// - The [switchLang] method requests a language change using the
 ///   [localizationsKey].
 /// - The [updateShouldNotify] method returns `true` if the [locale] has
 ///   changed, indicating the widget should be rebuilt.
@@ -132,11 +157,15 @@ class LocalizationsProvider extends InheritedWidget {
     required super.child,
     required this.locale,
     required this.localizationsKey,
+    this.lang,
     super.key,
   });
 
   /// Specifies the locale to use for localization.
   final Locale locale;
+
+  /// Specifies the language of the locale.
+  final Language? lang;
 
   /// Specifies the [GlobalLocalizationsKey] used to provide locale changes to
   /// descendant [LocalizationsProvider] widgets.
@@ -169,9 +198,15 @@ class LocalizationsProvider extends InheritedWidget {
   }
 
   /// Requests a locale change using the [localizationsKey].
-  void switchLanguage(final Locale locale) {
+  void switchLocale(final Locale locale) {
     final _LocalizationsState? currentState = localizationsKey.currentState;
-    currentState?.switchLanguage(locale);
+    currentState?.switchLocale(locale);
+  }
+
+  /// Requests a language change using the [localizationsKey].
+  void switchLang(final Language lang) {
+    final _LocalizationsState? currentState = localizationsKey.currentState;
+    currentState?.switchLang(lang);
   }
 
   /// Returns `true` if the [locale] has changed, indicating the widget should
@@ -192,10 +227,13 @@ class LocalizationsProvider extends InheritedWidget {
         ),
       )
       ..add(EnumProperty<Language?>('language', language))
-      ..add(EnumProperty<Language?>('maybeLanguage', maybeLanguage));
+      ..add(EnumProperty<Language?>('maybeLanguage', maybeLanguage))
+      ..add(EnumProperty<Language?>('lang', lang));
   }
 }
 
 class GlobalLocalizationsKey extends GlobalKey<_LocalizationsState> {
   const GlobalLocalizationsKey() : super.constructor();
 }
+
+typedef LocaleName = String;
