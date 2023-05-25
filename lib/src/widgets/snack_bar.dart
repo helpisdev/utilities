@@ -7,7 +7,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import '../../typography.dart';
 import '../extensions/context.dart';
-import 'screen_width_provider.dart';
+import 'screen_size_provider.dart';
 
 /// A snack bar content widget.
 ///

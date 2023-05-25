@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import '../screen_width_provider.dart';
+import '../screen_size_provider.dart';
 import '../typography/body/body_medium.dart';
 import 'button_group.dart';
 import 'utils.dart';

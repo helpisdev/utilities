@@ -9,7 +9,7 @@ import 'package:meta/meta.dart';
 import '../../../extensions/object.dart';
 
 import '../../../utils/functions.dart';
-import '../../screen_width_provider.dart';
+import '../../screen_size_provider.dart';
 
 class _ResizableTextStyleBuilder extends ResizableTextStyle {
   const _ResizableTextStyleBuilder({

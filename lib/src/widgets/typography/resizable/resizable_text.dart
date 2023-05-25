@@ -52,7 +52,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
 import '../../../utils/functions.dart';
-import '../../screen_width_provider.dart';
+import '../../screen_size_provider.dart';
 import '../utils.dart';
 import 'resizable_text_style.dart';
 
