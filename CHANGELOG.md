@@ -15,6 +15,31 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`utilities` - `v0.1.1+1`](#utilities---v0111)
+
+---
+
+#### `utilities` - `v0.1.1+1`
+
+ - **FIX**(localizations): Remove previous language getter implementations. ([6fe91134](https://github.com/helpisdev/utilities.git/commit/6fe9113411e7fc4b320b6ef1162f1653895e8ecd))
+
+## 0.1.1+1
+
+ - **FIX**(localizations): Remove previous language getter implementations. ([6fe91134](https://github.com/helpisdev/utilities.git/commit/6fe9113411e7fc4b320b6ef1162f1653895e8ecd))
+
+
+## 2023-05-25
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`utilities` - `v0.1.1`](#utilities---v011)
 
 ---
