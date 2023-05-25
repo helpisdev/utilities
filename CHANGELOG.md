@@ -15,6 +15,33 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`utilities` - `v0.3.0+3`](#utilities---v0303)
+
+---
+
+#### `utilities` - `v0.3.0+3`
+
+ - **FIX**(widgets): Rename screen_width_provider to screen_size_provider.. ([2201c23d](https://github.com/helpisdev/utilities.git/commit/2201c23d78b4782bb498a76f17d28c4987288162))
+ - **FIX**(routing): Export UtilitiesRouter. ([a3f91fc1](https://github.com/helpisdev/utilities.git/commit/a3f91fc1f9fb11272f28f462e0429020264a2802))
+
+## 0.3.0+3
+
+ - **FIX**(widgets): Rename screen_width_provider to screen_size_provider.. ([2201c23d](https://github.com/helpisdev/utilities.git/commit/2201c23d78b4782bb498a76f17d28c4987288162))
+ - **FIX**(routing): Export UtilitiesRouter. ([a3f91fc1](https://github.com/helpisdev/utilities.git/commit/a3f91fc1f9fb11272f28f462e0429020264a2802))
+
+
+## 2023-05-25
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`utilities` - `v0.3.0+2`](#utilities---v0302)
 
 ---
