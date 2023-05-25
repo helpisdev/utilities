@@ -62,7 +62,7 @@ class Localizations extends StatefulWidget {
 /// - The [Localizations.locale] parameter passed to the [Localizations] widget.
 /// - The system locale if [Localizations.locale] is `null`.
 ///
-/// The [switchLocale] method updates the [locale] and rebuilds the widget
+/// The [changeLocale] method updates the [locale] and rebuilds the widget
 /// subtree. It is called when a locale change is requested by descendant
 /// [LocalizationsProvider] widgets.
 ///
@@ -88,7 +88,7 @@ class _LocalizationsState extends State<Localizations> {
   /// Updates the [locale] and rebuilds the widget
   /// subtree. It is called when a locale change is requested by descendant
   /// [LocalizationsProvider] widgets.
-  void switchLocale(final Locale locale) {
+  void changeLocale(final Locale locale) {
     setState(
       () {
         this.locale = locale;
@@ -99,7 +99,7 @@ class _LocalizationsState extends State<Localizations> {
 
   /// Updates the [language] and rebuilds the widget subtree. It is called when a
   /// lang change is requested by descendant [LocalizationsProvider] widgets.
-  void switchLang(final Language language) {
+  void changeLanguage(final Language language) {
     setState(
       () {
         this.language = language;
@@ -141,9 +141,9 @@ class _LocalizationsState extends State<Localizations> {
 ///   [BuildContext]. If no [LocalizationsProvider] is found, an
 ///   [AssertionError] is thrown.
 ///
-/// - The [switchLocale] method requests a locale change using the
+/// - The [changeLocale] method requests a locale change using the
 ///   [localizationsKey].
-/// - The [switchLang] method requests a language change using the
+/// - The [changeLanguage] method requests a language change using the
 ///   [localizationsKey].
 /// - The [updateShouldNotify] method returns `true` if the [locale] has
 ///   changed, indicating the widget should be rebuilt.
@@ -180,15 +180,15 @@ class LocalizationsProvider extends InheritedWidget {
   }
 
   /// Requests a locale change using the [localizationsKey].
-  void switchLocale(final Locale locale) {
+  void changeLocale(final Locale locale) {
     final _LocalizationsState? currentState = localizationsKey.currentState;
-    currentState?.switchLocale(locale);
+    currentState?.changeLocale(locale);
   }
 
   /// Requests a language change using the [localizationsKey].
-  void switchLang(final Language language) {
+  void changeLanguage(final Language language) {
     final _LocalizationsState? currentState = localizationsKey.currentState;
-    currentState?.switchLang(language);
+    currentState?.changeLanguage(language);
   }
 
   /// Returns `true` if the [locale] has changed, indicating the widget should
