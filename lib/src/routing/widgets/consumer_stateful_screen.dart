@@ -118,6 +118,7 @@ abstract class ConsumerStatefulScreenWidgetBuilder<
   @override
   GoRouterAdaptiveScaffoldConfig? get adaptiveScaffoldConfig => null;
 
+  @mustBeOverridden
   @override
   T generate({
     final GoRouterState? state,
