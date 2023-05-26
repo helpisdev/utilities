@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-05-26
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - [`utilities` - `v0.5.0`](#utilities---v050)
+
+Packages with other changes:
+
+ - There are no other changes in this release.
+
+---
+
+#### `utilities` - `v0.5.0`
+
+ - **BREAKING** **FIX**(routing): Remove currentRoute extension. ([ede26fad](https://github.com/helpisdev/utilities.git/commit/ede26fadb5784d8599fbd5090c45d4c3df7557a3))
+
+## 0.5.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **FIX**(routing): Remove currentRoute extension. ([ede26fad](https://github.com/helpisdev/utilities.git/commit/ede26fadb5784d8599fbd5090c45d4c3df7557a3))
+
+
 ## 2023-05-25
 
 ### Changes
