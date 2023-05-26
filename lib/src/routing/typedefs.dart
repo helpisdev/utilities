@@ -1,9 +1,7 @@
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import 'router.dart';
 import 'widgets/widgets.dart';
 
 // typedefs
@@ -92,14 +90,10 @@ mixin ConsumerScreenBuilder {
 /// [Screen].
 @immutable
 abstract class ScreenRoute extends GoRouteData {
-  const ScreenRoute(final String location)
-      : _location = location,
-        super();
+  const ScreenRoute() : super();
 
   /// The screen builder that returns a [Screen].
   abstract final RouteBuilder builder;
-
-  final String _location;
 
   /// Screen's title.
   String get title => throw UnimplementedError();
@@ -107,13 +101,4 @@ abstract class ScreenRoute extends GoRouteData {
   @override
   Screen build(final BuildContext context, final GoRouterState state) =>
       builder(context, state);
-}
-
-extension CurrentRoute on BuildContext {
-  ScreenRoute? get currentRoute =>
-      UtilitiesRouter.of(this).screenRoutes.firstWhereOrNull(
-            (final ScreenRoute route) =>
-                GoRouteData.$location(route._location) ==
-                GoRouterState.of(this).location,
-          );
 }
