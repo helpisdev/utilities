@@ -11,6 +11,33 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 Packages with breaking changes:
 
+ - [`utilities` - `v0.6.0`](#utilities---v060)
+
+Packages with other changes:
+
+ - There are no other changes in this release.
+
+---
+
+#### `utilities` - `v0.6.0`
+
+ - **BREAKING** **FIX**(routing): Change screen_scaffold to use the newer API of adaptive_scaffold. ([a7c16589](https://github.com/helpisdev/utilities.git/commit/a7c1658958be1af82bf98990ab44b2c91bd02e5f))
+
+## 0.6.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **FIX**(routing): Change screen_scaffold to use the newer API of adaptive_scaffold. ([a7c16589](https://github.com/helpisdev/utilities.git/commit/a7c1658958be1af82bf98990ab44b2c91bd02e5f))
+
+
+## 2023-05-26
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
  - [`utilities` - `v0.5.0`](#utilities---v050)
 
 Packages with other changes:
