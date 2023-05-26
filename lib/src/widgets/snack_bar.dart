@@ -24,6 +24,7 @@ import 'screen_size_provider.dart';
 ///     [ScaffoldMessengerState] to show/hide the current snack bar.
 ///   - [theme] -> The [SnackBarContentTheme] which contains the styling for
 ///     this snack bar.
+///   - [onTap] -> A callback invoked when the snack bar is tapped.
 ///
 /// Functionality:
 /// - Displays a snack bar with the given title, message, and styling.
@@ -35,6 +36,7 @@ class SnackBarContent extends StatelessWidget {
     required this.kind,
     required this.scaffoldMessengerKey,
     required this.theme,
+    required this.onTap,
     super.key,
   });
 
@@ -55,10 +57,13 @@ class SnackBarContent extends StatelessWidget {
   /// The [SnackBarContentTheme] which contains the styling for this snack bar.
   final SnackBarContentTheme theme;
 
+  /// A callback invoked when the snack bar is tapped.
+  final VoidCallback? onTap;
+
   @override
   Widget build(final BuildContext context) => ScreenSizeProvider(
         child: GestureDetector(
-          onTap: _hideSnackbar,
+          onTap: onTap ?? _hideSnackbar,
           child: Stack(
             clipBehavior: Clip.none,
             children: <Widget>[
@@ -95,7 +100,8 @@ class SnackBarContent extends StatelessWidget {
           scaffoldMessengerKey,
         ),
       )
-      ..add(DiagnosticsProperty<SnackBarContentTheme>('theme', theme));
+      ..add(DiagnosticsProperty<SnackBarContentTheme>('theme', theme))
+      ..add(ObjectFlagProperty<VoidCallback?>.has('onTap', onTap));
   }
 }
 
@@ -598,6 +604,9 @@ class SnackBarTheme {
 /// The [onVisible] parameter defines an optional callback for when the snack
 /// bar becomes visible.
 ///
+/// The [onTap] parameter defines an optional callback for when the snack
+/// bar is tapped. The default behavior is to hide it.
+///
 /// The [theme] parameter defines the snack bar theme. Defaults to
 /// [SnackBarTheme].
 ///
@@ -610,6 +619,7 @@ void snackBar(
   final SnackBarKind kind = SnackBarKind.info,
   final SnackBarAction? action,
   final VoidCallback? onVisible,
+  final VoidCallback? onTap,
   final SnackBarTheme theme = const SnackBarTheme(),
   final SnackBarContentTheme contentTheme = const SnackBarContentTheme(),
 }) {
@@ -622,6 +632,7 @@ void snackBar(
           message: message,
           kind: kind,
           theme: contentTheme,
+          onTap: onTap,
         ),
         backgroundColor: theme.backgroundColor,
         elevation: theme.elevation,
