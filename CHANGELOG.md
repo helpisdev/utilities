@@ -11,6 +11,33 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 Packages with breaking changes:
 
+ - [`utilities` - `v0.7.0`](#utilities---v070)
+
+Packages with other changes:
+
+ - There are no other changes in this release.
+
+---
+
+#### `utilities` - `v0.7.0`
+
+ - **BREAKING** **FEAT**(routing): Integrate with newer adaptive_scaffold. ([bda1cd52](https://github.com/helpisdev/utilities.git/commit/bda1cd52b75e29b6ed13b2f7f4217dd7e58f5ef7))
+
+## 0.7.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **FEAT**(routing): Integrate with newer adaptive_scaffold. ([bda1cd52](https://github.com/helpisdev/utilities.git/commit/bda1cd52b75e29b6ed13b2f7f4217dd7e58f5ef7))
+
+
+## 2023-05-26
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
  - There are no breaking changes in this release.
 
 Packages with other changes:
