@@ -11,6 +11,31 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 Packages with breaking changes:
 
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`utilities` - `v0.6.0+1`](#utilities---v0601)
+
+---
+
+#### `utilities` - `v0.6.0+1`
+
+ - **FIX**(routing): Make sure that copying around AdaptiveScaffoldConfig does not duplicate GlobalKeys. ([28561c1e](https://github.com/helpisdev/utilities.git/commit/28561c1ea80f59c00b92cd4930584c26b2db6470))
+
+## 0.6.0+1
+
+ - **FIX**(routing): Make sure that copying around AdaptiveScaffoldConfig does not duplicate GlobalKeys. ([28561c1e](https://github.com/helpisdev/utilities.git/commit/28561c1ea80f59c00b92cd4930584c26b2db6470))
+
+
+## 2023-05-26
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
  - [`utilities` - `v0.6.0`](#utilities---v060)
 
 Packages with other changes:
