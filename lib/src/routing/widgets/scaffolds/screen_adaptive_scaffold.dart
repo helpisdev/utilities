@@ -190,7 +190,6 @@ class GoRouterAdaptiveScaffoldConfig extends AdaptiveScaffoldConfig {
     super.useSalomonBar,
     super.useInternalAnimations,
     super.iconSize,
-    super.scaffoldKey,
     super.extendBody,
     super.extendBodyBehindAppBar,
     super.floatingActionButton,
@@ -220,7 +219,6 @@ class GoRouterAdaptiveScaffoldConfig extends AdaptiveScaffoldConfig {
     final bool? useInternalAnimations,
     final bool? useSalomonBar,
     final AdaptiveAppBar? appBar,
-    final GlobalKey<ScaffoldState>? scaffoldKey,
     final bool? extendBody,
     final bool? extendBodyBehindAppBar,
     final Widget? floatingActionButton,
@@ -265,7 +263,6 @@ class GoRouterAdaptiveScaffoldConfig extends AdaptiveScaffoldConfig {
         primary: primary ?? config.primary,
         restorationId: restorationId ?? config.restorationId,
         bodyConfig: bodyConfig,
-        scaffoldKey: scaffoldKey ?? GlobalKey<ScaffoldState>(),
       );
 
   final GoRouterBodyConfig? _bodyConfig;
