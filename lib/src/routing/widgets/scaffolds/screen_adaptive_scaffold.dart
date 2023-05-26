@@ -219,7 +219,7 @@ class GoRouterAdaptiveScaffoldConfig extends AdaptiveScaffoldConfig {
     final double? iconSize,
     final bool? useInternalAnimations,
     final bool? useSalomonBar,
-    final PreferredSizeWidget? appBar,
+    final AdaptiveAppBar? appBar,
     final GlobalKey<ScaffoldState>? scaffoldKey,
     final bool? extendBody,
     final bool? extendBodyBehindAppBar,
