@@ -39,8 +39,9 @@ class ConsumerStatefulScreen
       ConsumerStatefulScreen(
         state: state ?? this.state,
         scaffold: scaffold ?? this.scaffold,
-        adaptiveScaffoldConfig:
-            adaptiveScaffoldConfig ?? this.adaptiveScaffoldConfig,
+        adaptiveScaffoldConfig: adaptiveScaffoldConfig ??
+            this.adaptiveScaffoldConfig?.copy()
+                as GoRouterAdaptiveScaffoldConfig?,
         key: key ?? this.key,
       );
 

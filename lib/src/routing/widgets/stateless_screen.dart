@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:meta/meta.dart';
 
 import '../../utils/functions.dart';
 import '../typedefs.dart';
@@ -47,8 +48,9 @@ final class StatelessScreen
       StatelessScreen(
         state: state ?? this.state,
         scaffold: scaffold ?? this.scaffold,
-        adaptiveScaffoldConfig:
-            adaptiveScaffoldConfig ?? this.adaptiveScaffoldConfig,
+        adaptiveScaffoldConfig: adaptiveScaffoldConfig ??
+            this.adaptiveScaffoldConfig?.copy()
+                as GoRouterAdaptiveScaffoldConfig?,
         key: key ?? this.key,
       );
 
@@ -149,6 +151,7 @@ abstract class StatelessScreenWidgetBuilder<
   @override
   GoRouterAdaptiveScaffoldConfig? get adaptiveScaffoldConfig => null;
 
+  @mustBeOverridden
   @override
   T generate({
     final GoRouterState? state,

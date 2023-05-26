@@ -107,7 +107,7 @@ class ScreenScaffold extends Scaffold with Screen {
         endDrawerEnableOpenDragGesture: endDrawerEnableOpenDragGesture ??
             scaffold.endDrawerEnableOpenDragGesture,
         restorationId: restorationId ?? scaffold.restorationId,
-        key: key ?? scaffold.key,
+        key: key ?? GlobalKey<ScaffoldState>(),
       );
 
   @override

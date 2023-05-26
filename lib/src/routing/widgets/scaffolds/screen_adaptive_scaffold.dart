@@ -265,7 +265,7 @@ class GoRouterAdaptiveScaffoldConfig extends AdaptiveScaffoldConfig {
         primary: primary ?? config.primary,
         restorationId: restorationId ?? config.restorationId,
         bodyConfig: bodyConfig,
-        scaffoldKey: scaffoldKey,
+        scaffoldKey: scaffoldKey ?? GlobalKey<ScaffoldState>(),
       );
 
   final GoRouterBodyConfig? _bodyConfig;
