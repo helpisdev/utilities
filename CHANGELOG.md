@@ -15,6 +15,31 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`utilities` - `v0.7.1+1`](#utilities---v0711)
+
+---
+
+#### `utilities` - `v0.7.1+1`
+
+ - **FIX**(routing): Pass context to route title since it will be needed for localization. ([dff55589](https://github.com/helpisdev/utilities.git/commit/dff55589ae4a8adfb77fb035539e2351f307b70c))
+
+## 0.7.1+1
+
+ - **FIX**(routing): Pass context to route title since it will be needed for localization. ([dff55589](https://github.com/helpisdev/utilities.git/commit/dff55589ae4a8adfb77fb035539e2351f307b70c))
+
+
+## 2023-05-27
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`utilities` - `v0.7.1`](#utilities---v071)
 
 ---
