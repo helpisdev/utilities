@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-05-27
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`utilities` - `v0.7.1`](#utilities---v071)
+
+---
+
+#### `utilities` - `v0.7.1`
+
+ - **FEAT**(loading_shimmer): Make shimmer configurable and height/width adjustable. ([88a62a9a](https://github.com/helpisdev/utilities.git/commit/88a62a9adb6b11f426ffb4439b7ae4ccec9a9a94))
+
+## 0.7.1
+
+ - **FEAT**(loading_shimmer): Make shimmer configurable and height/width adjustable. ([88a62a9a](https://github.com/helpisdev/utilities.git/commit/88a62a9adb6b11f426ffb4439b7ae4ccec9a9a94))
+
+
 ## 2023-05-26
 
 ### Changes
