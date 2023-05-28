@@ -63,7 +63,17 @@ class Base64Image extends StatelessWidget {
           final AsyncSnapshot<String> snapshot,
         ) {
           if (!snapshot.hasData) {
-            return const CircularProgressIndicator();
+            return ConstrainedBox(
+            	constraints: constraints,
+            	child: const Row(
+            		mainAxisSize: MainAxisSize.min,
+            		children: <Widget>[
+            			Flexible(
+            				child: CircularProgressIndicator.adaptive(),
+            			),
+            		],
+            	),
+            );
           }
           final File image = File(snapshot.data!);
           final bool exists = image.existsSync();
