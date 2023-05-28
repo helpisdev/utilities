@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-05-28
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`utilities` - `v0.7.1+2`](#utilities---v0712)
+
+---
+
+#### `utilities` - `v0.7.1+2`
+
+ - **FIX**(base64image): Make loading indicator respect user provided contraints. ([0792615e](https://github.com/helpisdev/utilities.git/commit/0792615e82b8b8100550baea90c015752e9fd828))
+
+## 0.7.1+2
+
+ - **FIX**(base64image): Make loading indicator respect user provided contraints. ([0792615e](https://github.com/helpisdev/utilities.git/commit/0792615e82b8b8100550baea90c015752e9fd828))
+
+
 ## 2023-05-27
 
 ### Changes
