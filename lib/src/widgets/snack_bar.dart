@@ -271,8 +271,14 @@ class _SnackbarMessage extends StatelessWidget {
         crossAxisAlignment: messagePlacement.xAxisAlignment,
         mainAxisAlignment: messagePlacement.yAxisAlignment,
         children: <Widget>[
-          Flexible(child: H2(title, maxLines: 2)),
-          Flexible(child: BodyNormal(message, maxLines: 3)),
+          Flexible(child: H3(title, maxLines: 2)),
+          Flexible(
+            child: BodyNormal(
+              message,
+              maxLines: 3,
+              style: BodyNormal.defaultStyle.copyWith(height: 1.15),
+            ),
+          ),
         ],
       );
 
