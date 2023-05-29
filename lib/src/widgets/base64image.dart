@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert' show base64Decode;
 import 'dart:core';
 import 'dart:ui';
@@ -26,7 +27,7 @@ class Base64Image extends StatelessWidget {
   });
 
   /// The base64 encoded string of the image data.
-  final String source;
+  final FutureOr<String> source;
 
   /// Specifies the size constraints for the image.
   final BoxConstraints constraints;
@@ -57,7 +58,7 @@ class Base64Image extends StatelessWidget {
 
   @override
   Widget build(final BuildContext context) => FutureBuilder<String>(
-        future: _tempDir,
+        future: Future<String>.value(source),
         builder: (
           final BuildContext context,
           final AsyncSnapshot<String> snapshot,
