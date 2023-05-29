@@ -67,11 +67,7 @@ class Base64Image extends StatelessWidget {
                   ..writeAsBytesSync(base64Decode(resolvedSource));
               }
 
-              final Widget image = CachedBase64Image(
-                source: resolvedSource,
-                id: id,
-                file: imageFile,
-              );
+              final Widget image = Image.file(imageFile);
               return ConstrainedBox(
                 constraints: constraints,
                 child: edit?.call(image) ?? image,
@@ -123,96 +119,3 @@ class LoadingImageIndicator extends StatelessWidget {
 
 /// A callback that can be used to modify the image widget.
 typedef EditImageCallback = Widget Function(Widget image);
-
-/// A widget that displays an image loaded from a [FileImage].
-class CachedBase64Image extends StatefulWidget {
-  const CachedBase64Image({
-    required this.source,
-    required this.id,
-    required this.file,
-    super.key,
-  });
-
-  final String source;
-  final String id;
-  final File file;
-
-  @override
-  CachedBase64ImageState createState() => CachedBase64ImageState();
-
-  @override
-  void debugFillProperties(final DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(StringProperty('source', source))
-      ..add(StringProperty('id', id))
-      ..add(DiagnosticsProperty<File>('file', file));
-  }
-}
-
-class CachedBase64ImageState extends State<CachedBase64Image> {
-  /// The [ImageStream] currently being listened to.
-  ImageStream? _imageStream;
-
-  /// The current [ImageInfo] object for the image.
-  ImageInfo? _imageInfo;
-
-  late final ImageProvider _provider;
-
-  @override
-  void initState() {
-    super.initState();
-    _provider = FileImage(widget.file);
-  }
-
-  /// Calls [_getImage] when the widget's dependencies change.
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _getImage();
-  }
-
-  /// Calls [_getImage] when the [CachedBase64Image] widget is updated.
-  @override
-  void didUpdateWidget(final CachedBase64Image oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    if (widget.id != oldWidget.id || widget.source != oldWidget.source) {
-      _getImage();
-    }
-  }
-
-  /// Updates [_imageStream] and adds a listener to it.
-  void _getImage() {
-    final ImageStream? oldImageStream = _imageStream;
-    final ImageConfiguration config = createLocalImageConfiguration(context);
-    _imageStream = _provider.resolve(config);
-    if (_imageStream!.key != oldImageStream?.key) {
-      final ImageStreamListener listener = ImageStreamListener(_updateImage);
-      oldImageStream?.removeListener(listener);
-      _imageStream!.addListener(listener);
-    }
-  }
-
-  /// Updates the image info and rebuilds the widget.
-  void _updateImage(final ImageInfo imageInfo, final bool synchronousCall) {
-    setState(() {
-      _imageInfo?.dispose();
-      _imageInfo = imageInfo;
-    });
-  }
-
-  /// Disposes the image stream listener and image info.
-  @override
-  void dispose() {
-    _imageStream?.removeListener(ImageStreamListener(_updateImage));
-    _imageInfo?.dispose();
-    _imageInfo = null;
-    super.dispose();
-  }
-
-  @override
-  Widget build(final BuildContext context) => RawImage(
-        image: _imageInfo?.image,
-        scale: _imageInfo?.scale ?? 1.0,
-      );
-}
