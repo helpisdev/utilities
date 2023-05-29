@@ -15,6 +15,33 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`utilities` - `v0.7.3+1`](#utilities---v0731)
+
+---
+
+#### `utilities` - `v0.7.3+1`
+
+ - **FIX**(snack_bar): Lower text line height to fit better at small screens. ([ba41a8b9](https://github.com/helpisdev/utilities.git/commit/ba41a8b978ce257b7b20d1c169ecabfc756f1603))
+ - **DOCS**(extensions): Improve docs in context extension. ([8c18fe54](https://github.com/helpisdev/utilities.git/commit/8c18fe5487ad6968858f15a0eb9df0bac3eb5a6d))
+
+## 0.7.3+1
+
+ - **FIX**(snack_bar): Lower text line height to fit better at small screens. ([ba41a8b9](https://github.com/helpisdev/utilities.git/commit/ba41a8b978ce257b7b20d1c169ecabfc756f1603))
+ - **DOCS**(extensions): Improve docs in context extension. ([8c18fe54](https://github.com/helpisdev/utilities.git/commit/8c18fe5487ad6968858f15a0eb9df0bac3eb5a6d))
+
+
+## 2023-05-29
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`utilities` - `v0.7.3`](#utilities---v073)
 
 ---

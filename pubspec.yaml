@@ -1,6 +1,6 @@
 name: utilities
 description: Flutter utilities.
-version: 0.7.3
+version: 0.7.3+1
 repository: "https://github.com/helpisdev/utilities.git"
 homepage: "https://utilities.helpis.dev"
 documentation: "https://utilities.helpis.dev/docs"
