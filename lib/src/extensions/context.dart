@@ -80,6 +80,6 @@ extension Context on BuildContext {
   /// Shorthand for [MediaQuery.of(this).textScaleFactor]
   double get textScaleFactor => MediaQuery.of(this).textScaleFactor;
 
-  /// get the shortestSide from screen
+  /// Shorthand for [MediaQuery.of(this).size.shortestSide]
   double get shortestSide => mediaQuerySize.shortestSide;
 }
