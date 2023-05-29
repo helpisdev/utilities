@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-05-29
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`utilities` - `v0.7.2`](#utilities---v072)
+
+---
+
+#### `utilities` - `v0.7.2`
+
+ - **FEAT**(base64image): Change cache implementation by utilizing the official FileImage as a cache provider and remove unnecessary costly computations (decoding the image in every build even if it is cached). ([f1726d94](https://github.com/helpisdev/utilities.git/commit/f1726d94d45c60bec10b5b495ee2a80b25220899))
+ - **FEAT**(base64image): Change API to allow passing an unresolved future source. ([de5d3eb2](https://github.com/helpisdev/utilities.git/commit/de5d3eb21caa96a7745e8b97f0d50e6fc9e52cb7))
+
+## 0.7.2
+
+ - **FEAT**(base64image): Change cache implementation by utilizing the official FileImage as a cache provider and remove unnecessary costly computations (decoding the image in every build even if it is cached). ([f1726d94](https://github.com/helpisdev/utilities.git/commit/f1726d94d45c60bec10b5b495ee2a80b25220899))
+ - **FEAT**(base64image): Change API to allow passing an unresolved future source. ([de5d3eb2](https://github.com/helpisdev/utilities.git/commit/de5d3eb21caa96a7745e8b97f0d50e6fc9e52cb7))
+
+
 ## 2023-05-28
 
 ### Changes
