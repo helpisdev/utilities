@@ -15,6 +15,31 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`utilities` - `v0.7.3`](#utilities---v073)
+
+---
+
+#### `utilities` - `v0.7.3`
+
+ - **FEAT**(base64image): Remove custom image cache provider and rely on FileImage + Image.file from the official team. ([bd0e1536](https://github.com/helpisdev/utilities.git/commit/bd0e15360d02990c8deb81e54a97bd14c1557cad))
+
+## 0.7.3
+
+ - **FEAT**(base64image): Remove custom image cache provider and rely on FileImage + Image.file from the official team. ([bd0e1536](https://github.com/helpisdev/utilities.git/commit/bd0e15360d02990c8deb81e54a97bd14c1557cad))
+
+
+## 2023-05-29
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`utilities` - `v0.7.2`](#utilities---v072)
 
 ---
