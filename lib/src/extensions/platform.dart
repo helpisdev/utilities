@@ -47,5 +47,4 @@ final class Platform {
   static List<String> get executableArguments =>
       io.Platform.executableArguments;
   static String? get packageConfig => io.Platform.packageConfig;
-  static String get lineTerminator => io.Platform.lineTerminator;
 }
