@@ -11,6 +11,33 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 Packages with breaking changes:
 
+ - [`utilities` - `v0.8.0`](#utilities---v080)
+
+Packages with other changes:
+
+ - There are no other changes in this release.
+
+---
+
+#### `utilities` - `v0.8.0`
+
+ - **BREAKING** **FEAT**(platform): Change Platform API to provide all members of Platform from universal_io plus the extras without having to guess how to use it. ([0c4c9074](https://github.com/helpisdev/utilities.git/commit/0c4c9074800a73bbb7b21c3049eabe4d1f121805))
+
+## 0.8.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **FEAT**(platform): Change Platform API to provide all members of Platform from universal_io plus the extras without having to guess how to use it. ([0c4c9074](https://github.com/helpisdev/utilities.git/commit/0c4c9074800a73bbb7b21c3049eabe4d1f121805))
+
+
+## 2023-05-30
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
  - There are no breaking changes in this release.
 
 Packages with other changes:
