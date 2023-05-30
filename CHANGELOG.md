@@ -15,6 +15,31 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`utilities` - `v0.7.3+4`](#utilities---v0734)
+
+---
+
+#### `utilities` - `v0.7.3+4`
+
+ - **FIX**(platform): Make methods static since there isn't any cross-platform way to instantiate Platform. ([8df0932f](https://github.com/helpisdev/utilities.git/commit/8df0932f381048bdd44d8bb1ff14a123e6da8eaf))
+
+## 0.7.3+4
+
+ - **FIX**(platform): Make methods static since there isn't any cross-platform way to instantiate Platform. ([8df0932f](https://github.com/helpisdev/utilities.git/commit/8df0932f381048bdd44d8bb1ff14a123e6da8eaf))
+
+
+## 2023-05-30
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`utilities` - `v0.7.3+3`](#utilities---v0733)
 
 ---
