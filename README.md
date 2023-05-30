@@ -75,6 +75,10 @@ You can find instructions on how to install those on their respected websites:
    import 'package:utilities/utilities.dart' as util;
    ```
 
+## Examples
+
+An extensive example with a demo application can be found at [utilities_example](https://github.com/helpisdev/utilities_example.git).
+
 <!-- STYLEGUIDES -->
 ## Styleguide
 
