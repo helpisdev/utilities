@@ -7,8 +7,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:path/path.dart' show join;
 import 'package:path_provider/path_provider.dart' show getTemporaryDirectory;
-import 'package:universal_io/io.dart';
+import 'package:universal_io/io.dart' hide Platform;
 import 'package:utilities/utilities.dart';
+
+// TODO(helpisdev): Improve the API:
+//   - Add custom placeholder
+//   - Add custom errorWidget
+//   - Add custom imageBuilder
+//   - Add caching dimensions
+//   - Add option to pass bytes directly
+//   - Cache image on web
 
 /// A widget that displays an image from a base64 encoded string.
 ///
@@ -45,29 +53,41 @@ class Base64Image extends StatelessWidget {
           }
           final String resolvedSource = snapshot.data!;
           final String id = resolvedSource.sha256asString;
-          return FutureBuilder<String>(
-            future: Future<String>.microtask(
+          return FutureBuilder<String?>(
+            future: Future<String?>.microtask(
               () async {
-                final String path = (await getTemporaryDirectory()).path;
-                return join(path, 'cache', 'images', id);
+                if (!Platform.isWeb) {
+                  final String path = (await getTemporaryDirectory()).path;
+                  return join(path, 'cache', 'images', id);
+                }
+                return null;
               },
             ),
             builder: (
               final BuildContext context,
-              final AsyncSnapshot<String> snapshot,
+              final AsyncSnapshot<String?> snapshot,
             ) {
-              if (!snapshot.hasData) {
-                return LoadingImageIndicator(constraints: constraints);
-              }
-              final File imageFile = File(snapshot.data!);
+              late final Widget image;
+              if (!Platform.isWeb) {
+                if (!snapshot.hasData) {
+                  return LoadingImageIndicator(constraints: constraints);
+                }
+                final File imageFile = File(snapshot.data!);
 
-              if (!imageFile.existsSync()) {
-                imageFile
-                  ..createSync(recursive: true)
-                  ..writeAsBytesSync(base64Decode(resolvedSource));
+                if (!imageFile.existsSync()) {
+                  imageFile
+                    ..createSync(recursive: true)
+                    ..writeAsBytesSync(base64Decode(resolvedSource));
+                }
+                image = Image.file(imageFile);
+              } else {
+                image = Image.memory(
+                  base64Decode(resolvedSource),
+                  cacheWidth: constraints.maxWidth.toInt(),
+                  cacheHeight: constraints.maxHeight.toInt(),
+                );
               }
 
-              final Widget image = Image.file(imageFile);
               return ConstrainedBox(
                 constraints: constraints,
                 child: edit?.call(image) ?? image,
