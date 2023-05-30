@@ -15,6 +15,31 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`utilities` - `v0.8.0+2`](#utilities---v0802)
+
+---
+
+#### `utilities` - `v0.8.0+2`
+
+ - **FIX**(base64image): Remove caching on web and immediately decode the image. ([d8b508b9](https://github.com/helpisdev/utilities.git/commit/d8b508b9de39606605dcd966b1f4b5a57f3b5a92))
+
+## 0.8.0+2
+
+ - **FIX**(base64image): Remove caching on web and immediately decode the image. ([d8b508b9](https://github.com/helpisdev/utilities.git/commit/d8b508b9de39606605dcd966b1f4b5a57f3b5a92))
+
+
+## 2023-05-30
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`utilities` - `v0.8.0+1`](#utilities---v0801)
 
 ---
