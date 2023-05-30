@@ -15,6 +15,31 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`utilities` - `v0.7.3+3`](#utilities---v0733)
+
+---
+
+#### `utilities` - `v0.7.3+3`
+
+ - **FIX**(platform): Use universal_io instead of platform to make the platform extension usable on every platform (including web). ([749dfd87](https://github.com/helpisdev/utilities.git/commit/749dfd87d383a476f9fb8569f02edb44a5a56ca8))
+
+## 0.7.3+3
+
+ - **FIX**(platform): Use universal_io instead of platform to make the platform extension usable on every platform (including web). ([749dfd87](https://github.com/helpisdev/utilities.git/commit/749dfd87d383a476f9fb8569f02edb44a5a56ca8))
+
+
+## 2023-05-30
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`utilities` - `v0.7.3+2`](#utilities---v0732)
 
 ---
