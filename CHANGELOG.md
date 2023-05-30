@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-05-30
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`utilities` - `v0.7.3+2`](#utilities---v0732)
+
+---
+
+#### `utilities` - `v0.7.3+2`
+
+ - **FIX**(platform): Use universal_io instead of platform to make the platform extension usable on every platform (including web). ([4f39550b](https://github.com/helpisdev/utilities.git/commit/4f39550bbdc0863826769d2a8edb52a4973ee8a3))
+ - **DOCS**: Add link to examples project. ([b2dbb7ba](https://github.com/helpisdev/utilities.git/commit/b2dbb7ba66dcc9f7f259b78cc32400fdb607dbe8))
+
+## 0.7.3+2
+
+ - **FIX**(platform): Use universal_io instead of platform to make the platform extension usable on every platform (including web). ([4f39550b](https://github.com/helpisdev/utilities.git/commit/4f39550bbdc0863826769d2a8edb52a4973ee8a3))
+ - **DOCS**: Add link to examples project. ([b2dbb7ba](https://github.com/helpisdev/utilities.git/commit/b2dbb7ba66dcc9f7f259b78cc32400fdb607dbe8))
+
+
 ## 2023-05-29
 
 ### Changes
