@@ -11,6 +11,31 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 Packages with breaking changes:
 
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`utilities` - `v0.8.0+1`](#utilities---v0801)
+
+---
+
+#### `utilities` - `v0.8.0+1`
+
+ - **FIX**(platform): Remove lineTerminator since it fails in build. ([0968ee83](https://github.com/helpisdev/utilities.git/commit/0968ee832a9cf778815261830fe0f7b4ef0e9e8a))
+
+## 0.8.0+1
+
+ - **FIX**(platform): Remove lineTerminator since it fails in build. ([0968ee83](https://github.com/helpisdev/utilities.git/commit/0968ee832a9cf778815261830fe0f7b4ef0e9e8a))
+
+
+## 2023-05-30
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
  - [`utilities` - `v0.8.0`](#utilities---v080)
 
 Packages with other changes:
