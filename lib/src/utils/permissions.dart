@@ -1,15 +1,10 @@
 import 'package:permission_handler/permission_handler.dart';
-import 'package:platform/platform.dart';
+import 'package:universal_io/io.dart';
 
 export 'package:permission_handler/permission_handler.dart';
-export 'package:platform/platform.dart';
 
 /// A set of [Permission]s.
 typedef PermissionBucket = Set<Permission>;
-
-/// The platform the app is running on.
-// ignore: constant_identifier_names
-const Platform PLATFORM = LocalPlatform();
 
 /// Handles requesting permissions using the `permission_handler` package.
 class PermissionHandler {
@@ -26,7 +21,7 @@ class PermissionHandler {
 
   /// Requests permissions and handles the response for each.
   Future<void> request() async {
-    if (PLATFORM.isWindows || PLATFORM.isAndroid || PLATFORM.isIOS) {
+    if (Platform.isWindows || Platform.isAndroid || Platform.isIOS) {
       for (final Permission permission in permissions) {
         final PermissionStatus status = await requestStatus(permission)!;
         switch (status) {
