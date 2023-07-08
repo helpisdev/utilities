@@ -188,16 +188,13 @@ class LocalizationsProvider extends InheritedWidget {
   }
 
   /// Requests a locale change using the [localizationsKey].
-  void changeLocale(final Locale locale) {
-    final _LocalizationsState? currentState = localizationsKey.currentState;
-    currentState?.changeLocale(locale);
-  }
+  void changeLocale(final Locale locale) => _currentState?.changeLocale(locale);
 
   /// Requests a language change using the [localizationsKey].
-  void changeLanguage(final Language language) {
-    final _LocalizationsState? currentState = localizationsKey.currentState;
-    currentState?.changeLanguage(language);
-  }
+  void changeLanguage(final Language language) =>
+      _currentState?.changeLanguage(language);
+
+  _LocalizationsState? get _currentState => localizationsKey.currentState;
 
   /// Returns `true` if the [locale] has changed, indicating the widget should
   /// be rebuilt.
