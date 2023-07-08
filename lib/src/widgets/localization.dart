@@ -44,6 +44,11 @@ class Localizations extends StatefulWidget {
   /// is used.
   final Locale? locale;
 
+  /// System's locale without region information.
+  static final Locale systemLocale = Locale(
+    Intl.systemLocale.substring(0, Intl.systemLocale.indexOf('_')),
+  );
+
   @override
   State<Localizations> createState() => _LocalizationsState();
 
@@ -83,8 +88,7 @@ class _LocalizationsState extends State<Localizations> {
   @override
   void initState() {
     super.initState();
-    locale = widget.locale ??
-        Locale(Intl.systemLocale.substring(0, Intl.systemLocale.indexOf('_')));
+    locale = widget.locale ?? Localizations.systemLocale;
     language = Language.byLocale(locale);
   }
 
