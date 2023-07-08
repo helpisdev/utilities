@@ -28,6 +28,7 @@ class PermissionHandler {
           case PermissionStatus.granted:
           case PermissionStatus.restricted:
           case PermissionStatus.limited:
+          case PermissionStatus.provisional:
             break;
           case PermissionStatus.denied:
             await permission.request();
