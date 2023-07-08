@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-07-08
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - [`utilities` - `v0.9.0`](#utilities---v090)
+
+Packages with other changes:
+
+ - There are no other changes in this release.
+
+---
+
+#### `utilities` - `v0.9.0`
+
+ - **FEAT**(permissions): Upgrade permission handler and accessibility tools. ([4dde65e2](https://github.com/helpisdev/utilities.git/commit/4dde65e215062bd813363eea0d20ebe3e6510510))
+ - **BREAKING** **FEAT**(routing): Upgrade Go Router and change RouteBuilder typedef to accomodate for API changes in Go Router (a private member in the package with the same name has been made public). ([49fa0604](https://github.com/helpisdev/utilities.git/commit/49fa06043eb9c0dcf167193a1c95996dc8019896))
+
+## 0.9.0
+
+> Note: This release has breaking changes.
+
+ - **FEAT**(permissions): Upgrade permission handler and accessibility tools. ([4dde65e2](https://github.com/helpisdev/utilities.git/commit/4dde65e215062bd813363eea0d20ebe3e6510510))
+ - **BREAKING** **FEAT**(routing): Upgrade Go Router and change RouteBuilder typedef to accomodate for API changes in Go Router (a private member in the package with the same name has been made public). ([49fa0604](https://github.com/helpisdev/utilities.git/commit/49fa06043eb9c0dcf167193a1c95996dc8019896))
+
+
 ## 2023-05-30
 
 ### Changes
