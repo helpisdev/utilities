@@ -11,6 +11,33 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 Packages with breaking changes:
 
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`utilities` - `v0.9.1`](#utilities---v091)
+
+---
+
+#### `utilities` - `v0.9.1`
+
+ - **REFACTOR**(localizations): Extract current state to variable. ([7a554ede](https://github.com/helpisdev/utilities.git/commit/7a554ede8cf8c58d002648ccc7082783f5de77e1))
+ - **FEAT**(localizations): Add system locale to the API. ([4652c58e](https://github.com/helpisdev/utilities.git/commit/4652c58ed8526665504fa8f137084b9b2b987b0f))
+
+## 0.9.1
+
+ - **REFACTOR**(localizations): Extract current state to variable. ([7a554ede](https://github.com/helpisdev/utilities.git/commit/7a554ede8cf8c58d002648ccc7082783f5de77e1))
+ - **FEAT**(localizations): Add system locale to the API. ([4652c58e](https://github.com/helpisdev/utilities.git/commit/4652c58ed8526665504fa8f137084b9b2b987b0f))
+
+
+## 2023-07-08
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
  - [`utilities` - `v0.9.0`](#utilities---v090)
 
 Packages with other changes:
