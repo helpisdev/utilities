@@ -27,7 +27,7 @@ typedef WidgetBuilderWithGoRouterStateWrapper = WidgetBuilderWithGoRouterState?
 ///
 /// See also:
 ///  * [Screen], which is the applications base type that defines a screen.
-typedef RouteBuilder = Screen Function(
+typedef RouteScreenBuilder = Screen Function(
   BuildContext context,
   GoRouterState state,
 );
@@ -93,7 +93,7 @@ abstract class ScreenRoute extends GoRouteData {
   const ScreenRoute() : super();
 
   /// The screen builder that returns a [Screen].
-  abstract final RouteBuilder builder;
+  abstract final RouteScreenBuilder builder;
 
   /// Screen's title.
   String title(final BuildContext context) => throw UnimplementedError();
