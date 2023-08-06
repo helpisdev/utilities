@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-08-06
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`utilities` - `v0.9.2`](#utilities---v092)
+
+---
+
+#### `utilities` - `v0.9.2`
+
+ - **FEAT**(routing): Add migration action from go router v8. ([3fa2bf9f](https://github.com/helpisdev/utilities.git/commit/3fa2bf9fd1f161f9e853c53f7fa7ff2960f03e1b))
+
+## 0.9.2
+
+ - **FEAT**(routing): Add migration action from go router v8. ([3fa2bf9f](https://github.com/helpisdev/utilities.git/commit/3fa2bf9fd1f161f9e853c53f7fa7ff2960f03e1b))
+
+
 ## 2023-07-08
 
 ### Changes
