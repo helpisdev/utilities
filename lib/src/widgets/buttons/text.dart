@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:resizable_text/resizable_text.dart';
+import 'package:screen_size_provider/screen_size_provider.dart';
 
-import '../screen_size_provider.dart';
-import '../typography/body/body_medium.dart';
 import 'button_group.dart';
 import 'utils.dart';
 
@@ -120,14 +120,14 @@ class StyledTextButton extends TextButton with StyledButton {
     final InteractiveInkFeatureFactory? splashFactory,
     @Deprecated('Use backgroundColor instead. '
         'This feature was deprecated after v3.1.0.')
-        final Color? primary,
+    final Color? primary,
     @Deprecated('Use foregroundColor instead. '
         'This feature was deprecated after v3.1.0.')
-        final Color? onPrimary,
+    final Color? onPrimary,
     @Deprecated(
         'Use disabledForegroundColor and disabledBackgroundColor instead. '
         'This feature was deprecated after v3.1.0.')
-        final Color? onSurface,
+    final Color? onSurface,
   }) {
     final Size deviceSize = ScreenSizeProvider.size;
     return TextButton.styleFrom(

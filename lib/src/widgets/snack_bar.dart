@@ -1,13 +1,13 @@
 import 'dart:math';
 
-import 'package:adaptive_scaffold/adaptive_scaffold.dart';
+import 'package:breakpoints_utilities/breakpoints_utilities.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:resizable_text/resizable_text.dart';
+import 'package:screen_size_provider/screen_size_provider.dart';
 
-import '../../typography.dart';
 import '../extensions/context.dart';
-import 'screen_size_provider.dart';
 
 /// A snack bar content widget.
 ///

@@ -12,17 +12,13 @@ environment:
 
 dependencies:
   accessibility_tools: ^1.0.0
-  adaptive_scaffold:
-    git:
-      url: https://github.com/helpisdev/adaptive_scaffold.git
-      ref: main
   app_links: ^3.4.3
   autoequal: ^0.5.1
+  breakpoints_utilities:
+    path: packages/resizable_text/packages/breakpoints_utilities
   collection: ^1.17.2
   context_menu:
-    git:
-      url: https://github.com/helpisdev/context_menu.git
-      ref: main
+    path: packages/context_menu
   crypto: ^3.0.3
   equatable: ^2.0.5
   flutter:
@@ -40,7 +36,11 @@ dependencies:
   path_provider: ^2.0.15
   permission_handler: ^10.4.2
   platform: ^3.1.0
+  resizable_text:
+    path: packages/resizable_text
   riverpod: ^2.3.6
+  screen_size_provider:
+    path: packages/resizable_text/packages/screen_size_provider
   shimmer: ^3.0.0
   universal_io: ^2.2.2
 
