@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-08-19
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - [`utilities` - `v0.10.0`](#utilities---v0100)
+
+Packages with other changes:
+
+ - There are no other changes in this release.
+
+---
+
+#### `utilities` - `v0.10.0`
+
+ - **BREAKING** **FEAT**: Remove all utilities that depend on git packages and remove git dependencies + move things to seperate packages. ([1720468f](https://github.com/helpisdev/utilities.git/commit/1720468ff9a4781bcd9b667a10a5d29cbe2dff11))
+
+## 0.10.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **FEAT**: Remove all utilities that depend on git packages and remove git dependencies + move things to seperate packages. ([1720468f](https://github.com/helpisdev/utilities.git/commit/1720468ff9a4781bcd9b667a10a5d29cbe2dff11))
+
+
 ## 2023-08-06
 
 ### Changes
