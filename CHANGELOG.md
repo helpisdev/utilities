@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-08-20
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - [`utilities` - `v0.11.0`](#utilities---v0110)
+
+Packages with other changes:
+
+ - There are no other changes in this release.
+
+---
+
+#### `utilities` - `v0.11.0`
+
+ - **BREAKING** **FEAT**: Replace serializable and copyable interfaces with json_serializable and copy_with_extension. ([d99a2397](https://github.com/helpisdev/utilities.git/commit/d99a239727792e8c00e6ae274ee053f3684807ef))
+
+## 0.11.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **FEAT**: Replace serializable and copyable interfaces with json_serializable and copy_with_extension. ([d99a2397](https://github.com/helpisdev/utilities.git/commit/d99a239727792e8c00e6ae274ee053f3684807ef))
+
+
 ## 2023-08-19
 
 ### Changes
