@@ -1,9 +1,9 @@
-import 'dart:convert';
+// ignore_for_file: constant_identifier_names
 
 import 'package:collection/collection.dart';
+import 'package:json_annotation/json_annotation.dart';
 
-import '../utils/serializable.dart';
-import '../utils/typedefs.dart';
+part 'currency.g.dart';
 
 /// Enum representing world currencies with their `ISO 4217` codes and symbols.
 ///
@@ -170,9 +170,12 @@ import '../utils/typedefs.dart';
 /// - [ZAR] -> South African Rand, symbol: R
 /// - [ZMW] -> Zambian Kwacha, symbol: K
 /// - [ZWD] -> Zimbabwean Dollar, symbol: Z$
-// ignore_for_file: constant_identifier_names
-
-enum Currency implements Serializable<Currency> {
+@JsonEnum(
+  valueField: 'fullName',
+  fieldRename: FieldRename.snake,
+  alwaysCreate: true,
+)
+enum Currency {
   /// Emirati Dirham, symbol: `د.إ`
   AED(fullName: 'Emirati Dirham', symbol: 'د.إ'),
 
@@ -674,51 +677,14 @@ enum Currency implements Serializable<Currency> {
   /// Returns a [Currency] enum value if [representation] matches a currency
   /// [name], [symbol] or [fullName]. Otherwise returns `null`.
   static Currency? of(final dynamic representation) =>
-      Serializable.tryDeserialize<Currency>(representation);
+      Currency.values.firstWhereOrNull(
+        (final Currency cur) =>
+            representation == cur.fullName ||
+            representation == cur.symbol ||
+            representation == cur,
+      );
 
   /// [value] is the amount to format. Returns a string with the [symbol] and
   /// [value] formatted according to the currency's locale.
   String format(final dynamic value) => '$symbol $value';
-
-  @override
-  Currency? deserialize(final dynamic obj) {
-    if (obj is Currency) {
-      return obj;
-    }
-    if (obj is JSON) {
-      return Currency.values.singleWhereOrNull(
-        (final Currency element) => element.serialize() == obj,
-      );
-    }
-    if (obj is String) {
-      try {
-        final JSON el = jsonDecode(obj);
-        return Currency.values.singleWhereOrNull(
-          (final Currency element) => element.serialize() == el,
-        );
-      } on FormatException {
-        // Gracefully disregard error...
-      }
-    }
-    return Currency.values.singleWhereOrNull(
-      (final Currency element) {
-        final [String val, String name, String fullName, String symbol] =
-            <String>[
-          obj.toString(),
-          element.name,
-          element.fullName,
-          element.symbol
-        ].map((final String e) => e.toLowerCase()).toList();
-
-        return name == val || fullName == val || symbol == val;
-      },
-    );
-  }
-
-  @override
-  JSON serialize({final bool deep = true}) => <String, dynamic>{
-        'name': name,
-        'full_name': fullName,
-        'symbol': symbol,
-      };
 }

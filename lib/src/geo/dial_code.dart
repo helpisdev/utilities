@@ -1,39 +1,27 @@
-import '../utils/serializable.dart';
+import 'package:copy_with_extension/copy_with_extension.dart';
+import 'package:json_annotation/json_annotation.dart';
+
 import '../utils/typedefs.dart';
+
+part 'dial_code.g.dart';
 
 /// Represents a phone dial code.
 ///
 /// [code] is the numeric dial code.
 ///
 /// [toString] returns the dial code prefixed with '+'.
-class DialCode implements Serializable<DialCode> {
+@CopyWith(copyWithNull: true)
+@JsonSerializable()
+class DialCode {
   const DialCode(this.code);
+
+  factory DialCode.fromJson(final JSON json) => _$DialCodeFromJson(json);
+
+  JSON toJson() => _$DialCodeToJson(this);
 
   /// The numeric dial code.
   final int code;
 
   @override
   String toString() => '+$code';
-
-  @override
-  DialCode? deserialize(final dynamic obj) {
-    final String jsonCode = (obj is JSON
-            ? (obj['code'] ?? obj['dialCode'] ?? obj['dial_code'])
-            : obj)
-        .toString()
-        .replaceAll('+', '')
-        .trim();
-
-    final int? code = Serializable.tryDeserialize<int>(jsonCode);
-
-    if (code == null) {
-      assert(false, 'DialCode deserialization error.');
-      return null;
-    }
-
-    return DialCode(code);
-  }
-
-  @override
-  String serialize({final bool deep = true}) => toString();
 }

@@ -4,7 +4,6 @@ export 'app_links.dart';
 export 'drag_direction.dart';
 export 'functions.dart';
 export 'permissions.dart';
-export 'serializable.dart';
 export 'transparent_pointer.dart';
 export 'typedefs.dart';
 export 'url_path_strategy.dart'

@@ -1,14 +1,12 @@
-import 'dart:convert';
+import 'package:json_annotation/json_annotation.dart';
 
-import 'package:collection/collection.dart';
-
-import '../utils/serializable.dart';
-import '../utils/typedefs.dart';
 import 'continent.dart';
 import 'currency.dart';
 import 'dial_code.dart';
 import 'iso_code.dart';
 import 'language.dart';
+
+part 'country.g.dart';
 
 /// Enum representing all countries in the world.
 ///
@@ -23,7 +21,12 @@ import 'language.dart';
 /// - [dialCode] -> The telephone dialing code of the country.
 /// - [currency] -> The currency used in the country.
 /// - [languages] -> The main languages spoken in the country.
-enum Country implements Serializable<Country> {
+@JsonEnum(
+  valueField: 'fullName',
+  fieldRename: FieldRename.snake,
+  alwaysCreate: true,
+)
+enum Country {
   ascensionIsland(
     capital: 'Georgetown',
     nativeName: 'Ascension Island',
@@ -456,7 +459,7 @@ enum Country implements Serializable<Country> {
       Language.LN,
       Language.KG,
       Language.SW,
-      Language.LU
+      Language.LU,
     ],
   ),
   centralAfricanRepublic(
@@ -770,7 +773,7 @@ enum Country implements Serializable<Country> {
       Language.EU,
       Language.CA,
       Language.GL,
-      Language.OC
+      Language.OC,
     ],
   ),
   ethiopia(
@@ -2782,47 +2785,6 @@ enum Country implements Serializable<Country> {
   /// The international dialing code to call the country.
   final DialCode dialCode;
 
-  @override
-  Country? deserialize(final dynamic obj) {
-    if (obj is Country) {
-      return obj;
-    }
-    if (obj is JSON) {
-      return byIsoCode(obj);
-    }
-    if (obj is String) {
-      try {
-        return byIsoCode(jsonDecode(obj));
-      } on FormatException {
-        // Gracefully disregard error...
-      }
-    }
-    return Country.values.singleWhereOrNull(
-      (final Country country) {
-        final String stringified = obj.toString();
-        return country == byCapital(stringified) ||
-            country == byFlag(stringified) ||
-            country == byNativeName(stringified) ||
-            country == byName(stringified) ||
-            country == byIsoCode(obj) ||
-            country == byDialCode(obj);
-      },
-    );
-  }
-
-  @override
-  JSON serialize({final bool deep = true}) => <String, dynamic>{
-        'iso_code': iso.serialize(),
-        'capital': capital,
-        'flag': flag,
-        'full_name': fullName,
-        'native_name': nativeName,
-        'continent': continent.serialize(),
-        'languages': languages.map((final Language lang) => lang.serialize()),
-        'currency': currency.serialize(),
-        'dial_code': dialCode.serialize(),
-      };
-
   static Country? _byX<T>(
     final dynamic val,
     final _CountryEqualityMarker marker,
@@ -2837,8 +2799,7 @@ enum Country implements Serializable<Country> {
         _CountryEqualityMarker.nativeName => country.nativeName,
         _CountryEqualityMarker.dialCode => country.dialCode,
       };
-      if ((val is T && val == equal) ||
-          Serializable.tryDeserialize<T>(val) == equal) {
+      if (val is T && val == equal) {
         return country;
       }
     }

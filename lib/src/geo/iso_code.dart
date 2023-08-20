@@ -1,10 +1,10 @@
 // ignore_for_file: constant_identifier_names
 
-import 'dart:convert';
+import 'package:json_annotation/json_annotation.dart';
 
-import '../utils/serializable.dart';
-import '../utils/typedefs.dart';
 import 'country.dart';
+
+part 'iso_code.g.dart';
 
 /// Enum representing ISO country codes.
 ///
@@ -19,7 +19,11 @@ import 'country.dart';
 /// IsoCode.GB // United Kingdom
 /// IsoCode.FR // France
 /// ```
-enum IsoCode implements Serializable<IsoCode> {
+@JsonEnum(
+  fieldRename: FieldRename.snake,
+  alwaysCreate: true,
+)
+enum IsoCode {
   AC,
   AD,
   AE,
@@ -267,32 +271,6 @@ enum IsoCode implements Serializable<IsoCode> {
   ZW;
 
   const IsoCode();
-
-  @override
-  String serialize({final bool deep = true}) => name;
-
-  @override
-  IsoCode? deserialize(final dynamic obj) {
-    JSON? json;
-    try {
-      if (obj is JSON) {
-        json = obj;
-      } else {
-        json = jsonDecode(obj.toString()) as JSON;
-      }
-    } on FormatException {
-      // Abort gracefully...
-    }
-    final IsoCode? code = switch (obj.runtimeType) {
-      IsoCode => obj,
-      // String or JSON or null
-      _ => IsoCode.values.asNameMap()[obj.toString().toUpperCase()] ??
-          json?['iso'] ??
-          json?['isoCode'] ??
-          json?['iso_code'],
-    };
-    return code;
-  }
 
   /// Returns the country corresponding to this ISO code.
   Country get country => Country.byIsoCode(this)!;

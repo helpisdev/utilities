@@ -1,8 +1,9 @@
 import 'package:autoequal/autoequal.dart';
+import 'package:copy_with_extension/copy_with_extension.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/widgets.dart';
+import 'package:json_annotation/json_annotation.dart';
 
-import '../utils/serializable.dart';
 import '../utils/typedefs.dart';
 import 'coordinates.dart';
 import 'country.dart';
@@ -12,8 +13,9 @@ part 'address.g.dart';
 /// Representation of a physical address.
 @immutable
 @autoequal
-class Address extends Equatable
-    implements Serializable<Address>, Copyable<Address> {
+@CopyWith(copyWithNull: true)
+@JsonSerializable()
+class Address extends Equatable {
   /// Initializes the address.
   ///
   /// Parameters:
@@ -40,6 +42,8 @@ class Address extends Equatable
     this.country,
     this.zipCode,
   });
+
+  factory Address.fromJson(final JSON json) => _$AddressFromJson(json);
 
   /// The name of the address (e.g. "Home").
   final String? name;
@@ -74,19 +78,7 @@ class Address extends Equatable
   @override
   List<Object?> get props => _$props;
 
-  @override
-  JSON serialize({final bool deep = true}) => <String, Object?>{
-        'coords': coords?.serialize(deep: deep),
-        'name': name,
-        'address': address,
-        'city': city,
-        'state': state,
-        'street': street,
-        'number': number,
-        'number_special': numberSpecial,
-        'country': country?.serialize(deep: deep),
-        'zip_code': zipCode,
-      };
+  JSON toJson() => _$AddressToJson(this);
 
   @override
   String toString() => '''
@@ -104,24 +96,6 @@ Address(
 )''';
 
   @override
-  Address deserialize(final dynamic obj) {
-    final JSON address = obj as JSON;
-
-    return Address(
-      coords: Serializable.tryDeserialize<Coordinates>(address['coords']),
-      name: address['name'],
-      address: address['address'],
-      city: address['city'],
-      state: address['state'],
-      street: address['street'],
-      number: address['number'],
-      numberSpecial: address['number_special'],
-      country: Serializable.tryDeserialize<Country>(address['country']),
-      zipCode: address['zip_code'],
-    );
-  }
-
-  @override
   int get hashCode => coords.hashCode;
 
   @override
@@ -137,42 +111,4 @@ Address(
       number == other.number &&
       country == other.country &&
       zipCode == other.zipCode;
-
-  @override
-  Address copyWith({
-    final JSON updates = const <String, dynamic>{},
-    final Address? other,
-  }) =>
-      Address(
-        name: updates['name'] ?? other?.name ?? name,
-        address: updates['address'] ?? other?.address ?? address,
-        street: updates['street'] ?? other?.street ?? street,
-        coords: updates['coords'] ?? other?.coords ?? coords,
-        number: updates['number'] ?? other?.number ?? number,
-        numberSpecial: updates['numberSpecial'] ??
-            updates['number_special'] ??
-            other?.numberSpecial ??
-            numberSpecial,
-        city: updates['city'] ?? other?.city ?? city,
-        state: updates['state'] ?? other?.state ?? state,
-        country: updates['country'] ?? other?.country ?? country,
-        zipCode: updates['zipCode'] ??
-            updates['zip_code'] ??
-            other?.zipCode ??
-            zipCode,
-      );
-
-  @override
-  Address copy() => Address(
-        name: name,
-        address: address,
-        street: street,
-        coords: coords,
-        number: number,
-        numberSpecial: numberSpecial,
-        city: city,
-        state: state,
-        country: country,
-        zipCode: zipCode,
-      );
 }
