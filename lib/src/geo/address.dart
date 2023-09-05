@@ -22,58 +22,48 @@ class Address extends Equatable {
   ///
   /// - [coords] -> The coordinates of the address.
   /// - [name] -> The name of the address (e.g. "Home").
-  /// - [address] -> The full address (e.g. "123 Main St").
   /// - [city] -> The city of the address.
   /// - [state] -> The state/province of the address.
   /// - [street] -> The street name of the address.
-  /// - [number] -> The street number of the address.
-  /// - [numberSpecial] -> Any special street number (e.g. "1/2").
+  /// - [numbering] -> The street numbering of the address.
   /// - [country] -> The country of the address.
   /// - [zipCode] -> The ZIP/postal code of the address.
   const Address({
-    this.coords,
-    this.name,
-    this.address,
-    this.city,
+    required this.coords,
+    required this.name,
+    required this.city,
+    required this.street,
+    required this.numbering,
+    required this.country,
+    required this.zipCode,
     this.state,
-    this.street,
-    this.number,
-    this.numberSpecial,
-    this.country,
-    this.zipCode,
   });
 
   factory Address.fromJson(final JSON json) => _$AddressFromJson(json);
 
   /// The name of the address (e.g. "Home").
-  final String? name;
-
-  /// The full address (e.g. "123 Main St").
-  final String? address;
+  final String name;
 
   /// The street name of the address.
-  final String? street;
+  final String street;
 
   /// The coordinates of the address.
-  final Coordinates? coords;
+  final Coordinates coords;
 
-  /// The street number of the address.
-  final int? number;
-
-  /// Any special street number (e.g. "1/2").
-  final String? numberSpecial;
+  /// Street numbering (e.g. "29a").
+  final String numbering;
 
   /// The city of the address.
-  final String? city;
+  final String city;
 
   /// The state/province of the address.
   final String? state;
 
   /// The country of the address.
-  final Country? country;
+  final Country country;
 
   /// The ZIP/postal code of the address.
-  final int? zipCode;
+  final int zipCode;
 
   @override
   List<Object?> get props => _$props;
@@ -85,12 +75,10 @@ class Address extends Equatable {
 Address(
   coords: $coords,
   name: $name,
-  address: $address,
   city: $city,
   state: $state,
   street: $street,
-  number: $number,
-  numberSpecial: $numberSpecial,
+  number: $numbering,
   country: $country,
   zipCode: $zipCode,
 )''';
@@ -103,12 +91,10 @@ Address(
       other is Address &&
       coords == other.coords &&
       name == other.name &&
-      address == other.address &&
       city == other.city &&
       state == other.state &&
       street == other.street &&
-      numberSpecial == other.numberSpecial &&
-      number == other.number &&
+      numbering == other.numbering &&
       country == other.country &&
       zipCode == other.zipCode;
 }

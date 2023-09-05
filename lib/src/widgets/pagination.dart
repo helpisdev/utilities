@@ -219,7 +219,7 @@ class _PaginationState extends State<Pagination> {
             if (!activeIsLast) dots,
           ],
       },
-      if (widget.hasFlowButtons) next
+      if (widget.hasFlowButtons) next,
     ];
   }
 

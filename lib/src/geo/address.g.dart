@@ -9,18 +9,8 @@ part of 'address.dart';
 extension _$AddressAutoequal on Address {
   @Deprecated(r'Use _$props instead')
   List<Object?> get _autoequalProps => _$props;
-  List<Object?> get _$props => [
-        name,
-        address,
-        street,
-        coords,
-        number,
-        numberSpecial,
-        city,
-        state,
-        country,
-        zipCode
-      ];
+  List<Object?> get _$props =>
+      [name, street, coords, numbering, city, state, country, zipCode];
 }
 
 // **************************************************************************
@@ -28,25 +18,21 @@ extension _$AddressAutoequal on Address {
 // **************************************************************************
 
 abstract class _$AddressCWProxy {
-  Address coords(Coordinates? coords);
+  Address coords(Coordinates coords);
 
-  Address name(String? name);
+  Address name(String name);
 
-  Address address(String? address);
+  Address city(String city);
 
-  Address city(String? city);
+  Address street(String street);
+
+  Address numbering(String numbering);
+
+  Address country(Country country);
+
+  Address zipCode(int zipCode);
 
   Address state(String? state);
-
-  Address street(String? street);
-
-  Address number(int? number);
-
-  Address numberSpecial(String? numberSpecial);
-
-  Address country(Country? country);
-
-  Address zipCode(int? zipCode);
 
   /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `Address(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
   ///
@@ -57,14 +43,12 @@ abstract class _$AddressCWProxy {
   Address call({
     Coordinates? coords,
     String? name,
-    String? address,
     String? city,
-    String? state,
     String? street,
-    int? number,
-    String? numberSpecial,
+    String? numbering,
     Country? country,
     int? zipCode,
+    String? state,
   });
 }
 
@@ -75,35 +59,28 @@ class _$AddressCWProxyImpl implements _$AddressCWProxy {
   final Address _value;
 
   @override
-  Address coords(Coordinates? coords) => this(coords: coords);
+  Address coords(Coordinates coords) => this(coords: coords);
 
   @override
-  Address name(String? name) => this(name: name);
+  Address name(String name) => this(name: name);
 
   @override
-  Address address(String? address) => this(address: address);
+  Address city(String city) => this(city: city);
 
   @override
-  Address city(String? city) => this(city: city);
+  Address street(String street) => this(street: street);
+
+  @override
+  Address numbering(String numbering) => this(numbering: numbering);
+
+  @override
+  Address country(Country country) => this(country: country);
+
+  @override
+  Address zipCode(int zipCode) => this(zipCode: zipCode);
 
   @override
   Address state(String? state) => this(state: state);
-
-  @override
-  Address street(String? street) => this(street: street);
-
-  @override
-  Address number(int? number) => this(number: number);
-
-  @override
-  Address numberSpecial(String? numberSpecial) =>
-      this(numberSpecial: numberSpecial);
-
-  @override
-  Address country(Country? country) => this(country: country);
-
-  @override
-  Address zipCode(int? zipCode) => this(zipCode: zipCode);
 
   @override
 
@@ -116,56 +93,46 @@ class _$AddressCWProxyImpl implements _$AddressCWProxy {
   Address call({
     Object? coords = const $CopyWithPlaceholder(),
     Object? name = const $CopyWithPlaceholder(),
-    Object? address = const $CopyWithPlaceholder(),
     Object? city = const $CopyWithPlaceholder(),
-    Object? state = const $CopyWithPlaceholder(),
     Object? street = const $CopyWithPlaceholder(),
-    Object? number = const $CopyWithPlaceholder(),
-    Object? numberSpecial = const $CopyWithPlaceholder(),
+    Object? numbering = const $CopyWithPlaceholder(),
     Object? country = const $CopyWithPlaceholder(),
     Object? zipCode = const $CopyWithPlaceholder(),
+    Object? state = const $CopyWithPlaceholder(),
   }) {
     return Address(
-      coords: coords == const $CopyWithPlaceholder()
+      coords: coords == const $CopyWithPlaceholder() || coords == null
           ? _value.coords
           // ignore: cast_nullable_to_non_nullable
-          : coords as Coordinates?,
-      name: name == const $CopyWithPlaceholder()
+          : coords as Coordinates,
+      name: name == const $CopyWithPlaceholder() || name == null
           ? _value.name
           // ignore: cast_nullable_to_non_nullable
-          : name as String?,
-      address: address == const $CopyWithPlaceholder()
-          ? _value.address
-          // ignore: cast_nullable_to_non_nullable
-          : address as String?,
-      city: city == const $CopyWithPlaceholder()
+          : name as String,
+      city: city == const $CopyWithPlaceholder() || city == null
           ? _value.city
           // ignore: cast_nullable_to_non_nullable
-          : city as String?,
+          : city as String,
+      street: street == const $CopyWithPlaceholder() || street == null
+          ? _value.street
+          // ignore: cast_nullable_to_non_nullable
+          : street as String,
+      numbering: numbering == const $CopyWithPlaceholder() || numbering == null
+          ? _value.numbering
+          // ignore: cast_nullable_to_non_nullable
+          : numbering as String,
+      country: country == const $CopyWithPlaceholder() || country == null
+          ? _value.country
+          // ignore: cast_nullable_to_non_nullable
+          : country as Country,
+      zipCode: zipCode == const $CopyWithPlaceholder() || zipCode == null
+          ? _value.zipCode
+          // ignore: cast_nullable_to_non_nullable
+          : zipCode as int,
       state: state == const $CopyWithPlaceholder()
           ? _value.state
           // ignore: cast_nullable_to_non_nullable
           : state as String?,
-      street: street == const $CopyWithPlaceholder()
-          ? _value.street
-          // ignore: cast_nullable_to_non_nullable
-          : street as String?,
-      number: number == const $CopyWithPlaceholder()
-          ? _value.number
-          // ignore: cast_nullable_to_non_nullable
-          : number as int?,
-      numberSpecial: numberSpecial == const $CopyWithPlaceholder()
-          ? _value.numberSpecial
-          // ignore: cast_nullable_to_non_nullable
-          : numberSpecial as String?,
-      country: country == const $CopyWithPlaceholder()
-          ? _value.country
-          // ignore: cast_nullable_to_non_nullable
-          : country as Country?,
-      zipCode: zipCode == const $CopyWithPlaceholder()
-          ? _value.zipCode
-          // ignore: cast_nullable_to_non_nullable
-          : zipCode as int?,
     );
   }
 }
@@ -182,28 +149,17 @@ extension $AddressCopyWith on Address {
   /// Address(...).copyWithNull(firstField: true, secondField: true)
   /// ````
   Address copyWithNull({
-    bool coords = false,
-    bool name = false,
-    bool address = false,
-    bool city = false,
     bool state = false,
-    bool street = false,
-    bool number = false,
-    bool numberSpecial = false,
-    bool country = false,
-    bool zipCode = false,
   }) {
     return Address(
-      coords: coords == true ? null : this.coords,
-      name: name == true ? null : this.name,
-      address: address == true ? null : this.address,
-      city: city == true ? null : this.city,
+      coords: coords,
+      name: name,
+      city: city,
+      street: street,
+      numbering: numbering,
+      country: country,
+      zipCode: zipCode,
       state: state == true ? null : this.state,
-      street: street == true ? null : this.street,
-      number: number == true ? null : this.number,
-      numberSpecial: numberSpecial == true ? null : this.numberSpecial,
-      country: country == true ? null : this.country,
-      zipCode: zipCode == true ? null : this.zipCode,
     );
   }
 }
@@ -217,21 +173,16 @@ Address _$AddressFromJson(Map json) => $checkedCreate(
       json,
       ($checkedConvert) {
         final val = Address(
-          coords: $checkedConvert(
-              'coords',
-              (v) => v == null
-                  ? null
-                  : Coordinates.fromJson(Map<String, dynamic>.from(v as Map))),
-          name: $checkedConvert('name', (v) => v as String?),
-          address: $checkedConvert('address', (v) => v as String?),
-          city: $checkedConvert('city', (v) => v as String?),
-          state: $checkedConvert('state', (v) => v as String?),
-          street: $checkedConvert('street', (v) => v as String?),
-          number: $checkedConvert('number', (v) => v as int?),
-          numberSpecial: $checkedConvert('numberSpecial', (v) => v as String?),
+          coords: $checkedConvert('coords',
+              (v) => Coordinates.fromJson(Map<String, dynamic>.from(v as Map))),
+          name: $checkedConvert('name', (v) => v as String),
+          city: $checkedConvert('city', (v) => v as String),
+          street: $checkedConvert('street', (v) => v as String),
+          numbering: $checkedConvert('numbering', (v) => v as String),
           country: $checkedConvert(
-              'country', (v) => $enumDecodeNullable(_$CountryEnumMap, v)),
-          zipCode: $checkedConvert('zipCode', (v) => v as int?),
+              'country', (v) => $enumDecode(_$CountryEnumMap, v)),
+          zipCode: $checkedConvert('zipCode', (v) => v as int),
+          state: $checkedConvert('state', (v) => v as String?),
         );
         return val;
       },
@@ -239,11 +190,9 @@ Address _$AddressFromJson(Map json) => $checkedCreate(
 
 const _$AddressFieldMap = <String, String>{
   'name': 'name',
-  'address': 'address',
   'street': 'street',
   'coords': 'coords',
-  'number': 'number',
-  'numberSpecial': 'numberSpecial',
+  'numbering': 'numbering',
   'city': 'city',
   'state': 'state',
   'country': 'country',
@@ -253,37 +202,31 @@ const _$AddressFieldMap = <String, String>{
 // ignore: unused_element
 abstract class _$AddressPerFieldToJson {
   // ignore: unused_element
-  static Object? name(String? instance) => instance;
+  static Object? name(String instance) => instance;
   // ignore: unused_element
-  static Object? address(String? instance) => instance;
+  static Object? street(String instance) => instance;
   // ignore: unused_element
-  static Object? street(String? instance) => instance;
+  static Object? coords(Coordinates instance) => instance.toJson();
   // ignore: unused_element
-  static Object? coords(Coordinates? instance) => instance?.toJson();
+  static Object? numbering(String instance) => instance;
   // ignore: unused_element
-  static Object? number(int? instance) => instance;
-  // ignore: unused_element
-  static Object? numberSpecial(String? instance) => instance;
-  // ignore: unused_element
-  static Object? city(String? instance) => instance;
+  static Object? city(String instance) => instance;
   // ignore: unused_element
   static Object? state(String? instance) => instance;
   // ignore: unused_element
-  static Object? country(Country? instance) => _$CountryEnumMap[instance];
+  static Object? country(Country instance) => _$CountryEnumMap[instance]!;
   // ignore: unused_element
-  static Object? zipCode(int? instance) => instance;
+  static Object? zipCode(int instance) => instance;
 }
 
 Map<String, dynamic> _$AddressToJson(Address instance) => <String, dynamic>{
       'name': instance.name,
-      'address': instance.address,
       'street': instance.street,
-      'coords': instance.coords?.toJson(),
-      'number': instance.number,
-      'numberSpecial': instance.numberSpecial,
+      'coords': instance.coords.toJson(),
+      'numbering': instance.numbering,
       'city': instance.city,
       'state': instance.state,
-      'country': _$CountryEnumMap[instance.country],
+      'country': _$CountryEnumMap[instance.country]!,
       'zipCode': instance.zipCode,
     };
 
