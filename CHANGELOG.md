@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-09-15
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`utilities` - `v0.12.1`](#utilities---v0121)
+
+---
+
+#### `utilities` - `v0.12.1`
+
+ - **FEAT**(geo): Add utility to get iso code by name. ([4e08795c](https://github.com/helpisdev/utilities.git/commit/4e08795cb2d93ff60a8d2f871ba1ad659600f878))
+
+## 0.12.1
+
+ - **FEAT**(geo): Add utility to get iso code by name. ([4e08795c](https://github.com/helpisdev/utilities.git/commit/4e08795cb2d93ff60a8d2f871ba1ad659600f878))
+
+
 ## 2023-09-05
 
 ### Changes
