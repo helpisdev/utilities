@@ -34,6 +34,7 @@ linter:
     - prefer_int_literals: false
     - always_use_package_imports: false
     - public_member_api_docs: false
+    - prefer_expression_function_bodies: false
     # true directives
     - always_declare_return_types
     - always_put_control_body_on_new_line
@@ -145,7 +146,6 @@ linter:
     - prefer_constructors_over_static_methods
     - prefer_contains
     - prefer_equal_for_default_values
-    - prefer_expression_function_bodies
     - prefer_final_fields
     - prefer_final_in_for_each
     - prefer_final_locals

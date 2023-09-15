@@ -1,5 +1,6 @@
 // ignore_for_file: constant_identifier_names
 
+import 'package:collection/collection.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'country.dart';
@@ -274,4 +275,11 @@ enum IsoCode {
 
   /// Returns the country corresponding to this ISO code.
   Country get country => Country.byIsoCode(this)!;
+
+  /// Returns the ISO code corresponding to this [name].
+  static IsoCode? byName(final String name) {
+    return IsoCode.values.firstWhereOrNull(
+      (final IsoCode iso) => iso.name == name.toUpperCase(),
+    );
+  }
 }
