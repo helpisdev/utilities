@@ -7,8 +7,8 @@ documentation: "https://utilities.helpis.dev/docs"
 publish_to: none
 
 environment:
-  sdk: ">=3.0.0 <4.0.0"
-  flutter: ">=3.10.0"
+  sdk: ">=3.1.2 <4.0.0"
+  flutter: ">=3.13.5 <4.0.0"
 
 dependencies:
   app_links: ^3.4.3
