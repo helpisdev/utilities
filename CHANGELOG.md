@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-10-16
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`utilities` - `v0.12.2`](#utilities---v0122)
+
+---
+
+#### `utilities` - `v0.12.2`
+
+ - **FEAT**(permissions): Add more granular control over how permission status is requested and handled. ([0215ebb3](https://github.com/helpisdev/utilities.git/commit/0215ebb3bc8cfb3737711deffb0c4c5ac2e883d8))
+
+## 0.12.2
+
+ - **FEAT**(permissions): Add more granular control over how permission status is requested and handled. ([0215ebb3](https://github.com/helpisdev/utilities.git/commit/0215ebb3bc8cfb3737711deffb0c4c5ac2e883d8))
+
+
 ## 2023-09-15
 
 ### Changes
