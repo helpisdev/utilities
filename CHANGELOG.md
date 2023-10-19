@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-10-19
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`utilities` - `v0.12.3`](#utilities---v0123)
+
+---
+
+#### `utilities` - `v0.12.3`
+
+ - **FEAT**(types): Add JSON entry type. ([11838721](https://github.com/helpisdev/utilities.git/commit/11838721fa77ee66eb09714a11ac82e53b2941b0))
+
+## 0.12.3
+
+ - **FEAT**(types): Add JSON entry type. ([11838721](https://github.com/helpisdev/utilities.git/commit/11838721fa77ee66eb09714a11ac82e53b2941b0))
+
+
 ## 2023-10-16
 
 ### Changes
