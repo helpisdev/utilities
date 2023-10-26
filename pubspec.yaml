@@ -7,16 +7,16 @@ documentation: "https://utilities.helpis.dev/docs"
 publish_to: none
 
 environment:
-  sdk: ">=3.1.2 <4.0.0"
-  flutter: ">=3.13.5 <4.0.0"
+  sdk: ">=3.1.5 <4.0.0"
+  flutter: ">=3.13.9 <4.0.0"
 
 dependencies:
-  app_links: ^3.4.3
+  app_links: ^3.4.5
   autoequal: ^0.5.1
   breakpoints_utilities:
     path: packages/resizable_text/packages/breakpoints_utilities
-  chopper: ^7.0.4
-  collection: ^1.17.2
+  chopper: ^7.0.8
+  collection: ^1.18.0
   context_menu:
     path: packages/context_menu
   copy_with_extension: ^5.0.4
@@ -26,16 +26,16 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  flutter_riverpod: ^2.3.6
+  flutter_riverpod: ^2.4.4
   intl: ^0.18.1
   json_annotation: ^4.8.1
   meta: ^1.9.1
   path: ^1.8.3
-  path_provider: ^2.0.15
-  permission_handler: ^11.0.0
+  path_provider: ^2.1.1
+  permission_handler: ^11.0.1
   resizable_text:
     path: packages/resizable_text
-  riverpod: ^2.3.6
+  riverpod: ^2.4.4
   screen_size_provider:
     path: packages/resizable_text/packages/screen_size_provider
   shimmer: ^3.0.0
@@ -46,7 +46,7 @@ dev_dependencies:
   build_runner: ^2.4.6
   copy_with_extension_gen: ^5.0.4
   json_serializable: ^6.7.1
-  melos: ^3.0.1
+  melos: ^3.2.0
 
 dependency_overrides:
   collection: ^1.18.0
