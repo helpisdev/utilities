@@ -1,4 +1,4 @@
-# melos_managed_dependency_overrides: breakpoints_utilities,context_menu,resizable_text,screen_size_provider,analyzer,dart_style,file,material_color_utilities,meta,permission_handler_android,permission_handler_apple,permission_handler_platform_interface,permission_handler_windows,process,pub_updater,web
+# melos_managed_dependency_overrides: breakpoints_utilities,context_menu,resizable_text,screen_size_provider,file,material_color_utilities,meta,process,pub_updater,web
 dependency_overrides:
   breakpoints_utilities:
     path: packages/resizable_text/packages/breakpoints_utilities
@@ -8,15 +8,9 @@ dependency_overrides:
     path: packages/resizable_text
   screen_size_provider:
     path: packages/resizable_text/packages/screen_size_provider
-  analyzer: ^6.3.0
-  dart_style: ^2.3.3
   file: ^7.0.0
   material_color_utilities: ^0.8.0
   meta: ^1.11.0
-  permission_handler_android: ^12.0.1
-  permission_handler_apple: ^9.2.0
-  permission_handler_platform_interface: ^4.0.2
-  permission_handler_windows: ^0.2.0
   process: ^5.0.1
   pub_updater: ^0.4.0
   web: ^0.4.0

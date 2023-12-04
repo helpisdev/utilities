@@ -7,15 +7,14 @@ documentation: "https://utilities.helpis.dev/docs"
 publish_to: none
 
 environment:
-  sdk: ">=3.2.0 <4.0.0"
-  flutter: ">=3.16.0 <4.0.0"
+  sdk: ">=3.2.2 <4.0.0"
+  flutter: ">=3.16.2 <4.0.0"
 
 dependencies:
   app_links: ^3.4.5
-  autoequal: ^0.5.1
+  autoequal: ^0.7.1
   breakpoints_utilities:
     path: packages/resizable_text/packages/breakpoints_utilities
-  chopper: ^7.0.9
   collection: ^1.18.0
   context_menu:
     path: packages/context_menu
@@ -26,38 +25,32 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  flutter_riverpod: ^2.4.6
+  flutter_riverpod: ^2.4.9
   intl: ^0.18.1
   json_annotation: ^4.8.1
-  meta: ^1.10.0
+  meta: ^1.11.0
   path: ^1.8.3
   path_provider: ^2.1.1
-  permission_handler: ^11.0.1
+  permission_handler: ^11.1.0
   resizable_text:
     path: packages/resizable_text
-  riverpod: ^2.4.6
+  riverpod: ^2.4.9
   screen_size_provider:
     path: packages/resizable_text/packages/screen_size_provider
   shimmer: ^3.0.0
   universal_io: ^2.2.2
 
 dev_dependencies:
-  autoequal_gen: ^0.5.1
-  build_runner: ^2.4.6
+  autoequal_gen: ^0.7.1
+  build_runner: ^2.4.7
   copy_with_extension_gen: ^5.0.4
   json_serializable: ^6.7.1
-  melos: ^3.2.0
+  melos: ^3.3.0
 
 dependency_overrides:
-  analyzer: ^6.3.0
-  dart_style: ^2.3.3
   file: ^7.0.0
   material_color_utilities: ^0.8.0
   meta: ^1.11.0
-  permission_handler_android: ^12.0.1
-  permission_handler_apple: ^9.2.0
-  permission_handler_platform_interface: ^4.0.2
-  permission_handler_windows: ^0.2.0
   process: ^5.0.1
   pub_updater: ^0.4.0
   web: ^0.4.0
