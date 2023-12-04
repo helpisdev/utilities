@@ -1,5 +1,3 @@
-library utilities.widgets;
-
 export 'async_value_widget.dart';
 export 'base64image.dart';
 export 'buttons/buttons.dart';

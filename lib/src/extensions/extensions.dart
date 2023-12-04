@@ -1,5 +1,3 @@
-library utilities.extensions;
-
 export 'bool.dart';
 export 'context.dart';
 export 'list.dart';

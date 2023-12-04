@@ -8,7 +8,7 @@ import 'package:flutter/rendering.dart';
 import 'package:path/path.dart' show join;
 import 'package:path_provider/path_provider.dart' show getTemporaryDirectory;
 import 'package:universal_io/io.dart' hide Platform;
-import 'package:utilities/utilities.dart';
+import '../../utilities.dart';
 
 // TODO(helpisdev): Improve the API:
 //   - Add custom placeholder

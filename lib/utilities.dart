@@ -1,5 +1,3 @@
-library utilities;
-
 export 'extensions.dart';
 export 'geo.dart';
 export 'utils.dart';

@@ -1,5 +1,3 @@
-library utilities.geo;
-
 export 'address.dart';
 export 'continent.dart';
 export 'coordinates.dart';
