@@ -9,7 +9,10 @@ part of 'coordinates.dart';
 extension _$CoordinatesAutoequal on Coordinates {
   @Deprecated(r'Use _$props instead')
   List<Object?> get _autoequalProps => _$props;
-  List<Object?> get _$props => [latitude, longitude];
+  List<Object?> get _$props => [
+        latitude,
+        longitude,
+      ];
 }
 
 // **************************************************************************

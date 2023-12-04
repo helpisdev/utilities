@@ -9,8 +9,16 @@ part of 'address.dart';
 extension _$AddressAutoequal on Address {
   @Deprecated(r'Use _$props instead')
   List<Object?> get _autoequalProps => _$props;
-  List<Object?> get _$props =>
-      [name, street, coords, numbering, city, state, country, zipCode];
+  List<Object?> get _$props => [
+        name,
+        street,
+        coords,
+        numbering,
+        city,
+        state,
+        country,
+        zipCode,
+      ];
 }
 
 // **************************************************************************
