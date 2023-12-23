@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-12-23
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - [`utilities` - `v0.13.0`](#utilities---v0130)
+
+Packages with other changes:
+
+ - There are no other changes in this release.
+
+---
+
+#### `utilities` - `v0.13.0`
+
+ - **BREAKING** **FEAT**(app_links): Remove wrapper around app links. ([ae315f85](https://github.com/helpisdev/utilities.git/commit/ae315f85a38b9a65d6f3e87269bd6d78a7d05684))
+
+## 0.13.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **FEAT**(app_links): Remove wrapper around app links. ([ae315f85](https://github.com/helpisdev/utilities.git/commit/ae315f85a38b9a65d6f3e87269bd6d78a7d05684))
+
+
 ## 2023-12-04
 
 ### Changes
