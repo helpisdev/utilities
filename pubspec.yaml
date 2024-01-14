@@ -7,11 +7,11 @@ documentation: "https://utilities.helpis.dev/docs"
 publish_to: none
 
 environment:
-  sdk: ">=3.2.3 <4.0.0"
-  flutter: ">=3.16.5 <4.0.0"
+  sdk: ">=3.2.4 <4.0.0"
+  flutter: ">=3.16.7 <4.0.0"
 
 dependencies:
-  autoequal: ^0.8.0
+  autoequal: ^0.9.0
   breakpoints_utilities:
     path: packages/resizable_text/packages/breakpoints_utilities
   collection: ^1.18.0
@@ -40,11 +40,11 @@ dependencies:
   universal_io: ^2.2.2
 
 dev_dependencies:
-  autoequal_gen: ^0.8.0
+  autoequal_gen: ^0.9.0
   build_runner: ^2.4.7
   copy_with_extension_gen: ^5.0.4
   json_serializable: ^6.7.1
-  melos: ^3.3.0
+  melos: ^4.0.0
 
 dependency_overrides:
   file: ^7.0.0
