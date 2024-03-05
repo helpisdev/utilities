@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'continent.dart';
@@ -21,12 +22,9 @@ part 'country.g.dart';
 /// - [dialCode] -> The telephone dialing code of the country.
 /// - [currency] -> The currency used in the country.
 /// - [languages] -> The main languages spoken in the country.
-@JsonEnum(
-  valueField: 'fullName',
-  fieldRename: FieldRename.snake,
-  alwaysCreate: true,
-)
+@JsonEnum(alwaysCreate: true)
 enum Country {
+  @JsonValue('AF')
   ascensionIsland(
     capital: 'Georgetown',
     nativeName: 'Ascension Island',
@@ -38,6 +36,7 @@ enum Country {
     currency: Currency.SHP,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('AD')
   andorra(
     capital: 'Andorra la Vella',
     nativeName: 'Andorra',
@@ -49,6 +48,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.CA],
   ),
+  @JsonValue('AE')
   unitedArabEmirates(
     capital: 'Abu Dhabi',
     nativeName: 'دولة الإمارات العربية المتحدة',
@@ -60,6 +60,7 @@ enum Country {
     currency: Currency.AED,
     languages: <Language>[Language.AR],
   ),
+  @JsonValue('AF')
   afghanistan(
     capital: 'Kabul',
     nativeName: 'افغانستان',
@@ -71,6 +72,7 @@ enum Country {
     currency: Currency.AFN,
     languages: <Language>[Language.PS, Language.UZ, Language.TK],
   ),
+  @JsonValue('AG')
   antiguaAndBarbuda(
     capital: '''Saint John's''',
     nativeName: 'Antigua and Barbuda',
@@ -82,6 +84,7 @@ enum Country {
     currency: Currency.XCD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('AI')
   anguilla(
     capital: 'The Valley',
     nativeName: 'Anguilla',
@@ -93,6 +96,7 @@ enum Country {
     currency: Currency.XCD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('AL')
   albania(
     capital: 'Tirana',
     nativeName: 'Shqipëria',
@@ -104,6 +108,7 @@ enum Country {
     currency: Currency.ALL,
     languages: <Language>[Language.SQ],
   ),
+  @JsonValue('AM')
   armenia(
     capital: 'Yerevan',
     nativeName: 'Հայաստան',
@@ -115,6 +120,7 @@ enum Country {
     currency: Currency.AMD,
     languages: <Language>[Language.HY, Language.RU],
   ),
+  @JsonValue('AO')
   angola(
     capital: 'Luanda',
     nativeName: 'Angola',
@@ -126,6 +132,7 @@ enum Country {
     currency: Currency.AOA,
     languages: <Language>[Language.PT],
   ),
+  @JsonValue('AR')
   argentina(
     capital: 'Buenos Aires',
     nativeName: 'Argentina',
@@ -137,6 +144,7 @@ enum Country {
     currency: Currency.ARS,
     languages: <Language>[Language.ES, Language.GN],
   ),
+  @JsonValue('AS')
   americanSamoa(
     capital: 'Pago Pago',
     nativeName: 'American Samoa',
@@ -148,6 +156,7 @@ enum Country {
     currency: Currency.USD,
     languages: <Language>[Language.EN, Language.SM],
   ),
+  @JsonValue('AT')
   austria(
     capital: 'Vienna',
     nativeName: 'Österreich',
@@ -159,6 +168,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.DE],
   ),
+  @JsonValue('AU')
   australia(
     capital: 'Canberra',
     nativeName: 'Australia',
@@ -170,6 +180,7 @@ enum Country {
     currency: Currency.AUD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('AW')
   aruba(
     capital: 'Oranjestad',
     nativeName: 'Aruba',
@@ -181,6 +192,7 @@ enum Country {
     currency: Currency.AWG,
     languages: <Language>[Language.NL, Language.PA],
   ),
+  @JsonValue('AX')
   aland(
     capital: 'Mariehamn',
     nativeName: 'Åland',
@@ -192,6 +204,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.SV],
   ),
+  @JsonValue('AZ')
   azerbaijan(
     capital: 'Baku',
     nativeName: 'Azərbaycan',
@@ -203,6 +216,7 @@ enum Country {
     currency: Currency.AZN,
     languages: <Language>[Language.AZ],
   ),
+  @JsonValue('BA')
   bosniaAndHerzegovina(
     capital: 'Sarajevo',
     nativeName: 'Bosna i Hercegovina',
@@ -214,6 +228,7 @@ enum Country {
     currency: Currency.BAM,
     languages: <Language>[Language.BS, Language.HR, Language.SR],
   ),
+  @JsonValue('BB')
   barbados(
     capital: 'Bridgetown',
     nativeName: 'Barbados',
@@ -225,6 +240,7 @@ enum Country {
     currency: Currency.BBD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('BD')
   bangladesh(
     capital: 'Dhaka',
     nativeName: 'Bangladesh',
@@ -236,6 +252,7 @@ enum Country {
     currency: Currency.BDT,
     languages: <Language>[Language.BN],
   ),
+  @JsonValue('BE')
   belgium(
     capital: 'Brussels',
     nativeName: 'België',
@@ -247,6 +264,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.NL, Language.FR, Language.DE],
   ),
+  @JsonValue('BF')
   burkinaFaso(
     capital: 'Ouagadougou',
     nativeName: 'Burkina Faso',
@@ -258,6 +276,7 @@ enum Country {
     currency: Currency.XOF,
     languages: <Language>[Language.FR, Language.FF],
   ),
+  @JsonValue('BG')
   bulgaria(
     capital: 'Sofia',
     nativeName: 'България',
@@ -269,6 +288,7 @@ enum Country {
     currency: Currency.BGN,
     languages: <Language>[Language.BG],
   ),
+  @JsonValue('BH')
   bahrain(
     capital: 'Manama',
     nativeName: 'البحرين',
@@ -280,6 +300,7 @@ enum Country {
     currency: Currency.BHD,
     languages: <Language>[Language.AR],
   ),
+  @JsonValue('BI')
   burundi(
     capital: 'Bujumbura',
     nativeName: 'Burundi',
@@ -291,6 +312,7 @@ enum Country {
     currency: Currency.BIF,
     languages: <Language>[Language.FR, Language.RN],
   ),
+  @JsonValue('BJ')
   benin(
     capital: 'Porto-Novo',
     nativeName: 'Bénin',
@@ -302,6 +324,7 @@ enum Country {
     currency: Currency.XOF,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('BL')
   saintBarthelemy(
     capital: 'Gustavia',
     nativeName: 'Saint-Barthélemy',
@@ -313,6 +336,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('BM')
   bermuda(
     capital: 'Hamilton',
     nativeName: 'Bermuda',
@@ -324,6 +348,7 @@ enum Country {
     currency: Currency.BMD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('BN')
   brunei(
     capital: 'Bandar Seri Begawan',
     nativeName: 'Negara Brunei Darussalam',
@@ -335,6 +360,7 @@ enum Country {
     currency: Currency.BND,
     languages: <Language>[Language.MS],
   ),
+  @JsonValue('BO')
   bolivia(
     capital: 'Sucre',
     nativeName: 'Bolivia',
@@ -346,6 +372,7 @@ enum Country {
     currency: Currency.BOB,
     languages: <Language>[Language.ES, Language.AY, Language.QU],
   ),
+  @JsonValue('BQ')
   bonaire(
     capital: 'Kralendijk',
     nativeName: 'Bonaire',
@@ -357,6 +384,7 @@ enum Country {
     currency: Currency.USD,
     languages: <Language>[Language.NL],
   ),
+  @JsonValue('BR')
   brazil(
     capital: 'Brasília',
     nativeName: 'Brasil',
@@ -368,6 +396,7 @@ enum Country {
     currency: Currency.BRL,
     languages: <Language>[Language.PT],
   ),
+  @JsonValue('BS')
   bahamas(
     capital: 'Nassau',
     nativeName: 'Bahamas',
@@ -379,6 +408,7 @@ enum Country {
     currency: Currency.BSD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('BT')
   bhutan(
     capital: 'Thimphu',
     nativeName: 'ʼbrug-yul',
@@ -390,6 +420,7 @@ enum Country {
     currency: Currency.BTN,
     languages: <Language>[Language.DZ],
   ),
+  @JsonValue('BW')
   botswana(
     capital: 'Gaborone',
     nativeName: 'Botswana',
@@ -401,6 +432,7 @@ enum Country {
     currency: Currency.BWP,
     languages: <Language>[Language.EN, Language.TN],
   ),
+  @JsonValue('BY')
   belarus(
     capital: 'Minsk',
     nativeName: 'Белару́сь',
@@ -412,6 +444,7 @@ enum Country {
     currency: Currency.BYN,
     languages: <Language>[Language.BE, Language.RU],
   ),
+  @JsonValue('BZ')
   belize(
     capital: 'Belmopan',
     nativeName: 'Belize',
@@ -423,6 +456,7 @@ enum Country {
     currency: Currency.BZD,
     languages: <Language>[Language.EN, Language.ES],
   ),
+  @JsonValue('CA')
   canada(
     capital: 'Ottawa',
     nativeName: 'Canada',
@@ -434,6 +468,7 @@ enum Country {
     currency: Currency.CAD,
     languages: <Language>[Language.EN, Language.FR],
   ),
+  @JsonValue('CC')
   cocosKeelingIslands(
     capital: 'West Island',
     nativeName: 'Cocos (Keeling) Islands',
@@ -445,6 +480,7 @@ enum Country {
     currency: Currency.AUD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('CD')
   democraticRepublicOfTheCongo(
     capital: 'Kinshasa',
     nativeName: 'République démocratique du Congo',
@@ -462,6 +498,7 @@ enum Country {
       Language.LU,
     ],
   ),
+  @JsonValue('CF')
   centralAfricanRepublic(
     capital: 'Bangui',
     nativeName: 'Ködörösêse tî Bêafrîka',
@@ -473,6 +510,7 @@ enum Country {
     currency: Currency.XAF,
     languages: <Language>[Language.FR, Language.SG],
   ),
+  @JsonValue('CG')
   republicOfTheCongo(
     capital: 'Brazzaville',
     nativeName: 'République du Congo',
@@ -484,6 +522,7 @@ enum Country {
     currency: Currency.XAF,
     languages: <Language>[Language.FR, Language.LN],
   ),
+  @JsonValue('CH')
   switzerland(
     capital: 'Bern',
     nativeName: 'Schweiz',
@@ -495,6 +534,7 @@ enum Country {
     currency: Currency.CHF,
     languages: <Language>[Language.DE, Language.FR, Language.IT],
   ),
+  @JsonValue('CI')
   ivoryCoast(
     capital: 'Yamoussoukro',
     nativeName: '''Côte d'Ivoire''',
@@ -506,6 +546,7 @@ enum Country {
     currency: Currency.XOF,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('CK')
   cookIslands(
     capital: 'Avarua',
     nativeName: 'Cook Islands',
@@ -517,6 +558,7 @@ enum Country {
     currency: Currency.NZD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('CL')
   chile(
     capital: 'Santiago',
     nativeName: 'Chile',
@@ -528,6 +570,7 @@ enum Country {
     currency: Currency.CLF,
     languages: <Language>[Language.ES],
   ),
+  @JsonValue('CM')
   cameroon(
     capital: 'Yaoundé',
     nativeName: 'Cameroon',
@@ -539,6 +582,7 @@ enum Country {
     currency: Currency.XAF,
     languages: <Language>[Language.EN, Language.FR],
   ),
+  @JsonValue('CN')
   china(
     capital: 'Beijing',
     nativeName: '中国',
@@ -550,6 +594,7 @@ enum Country {
     currency: Currency.CNY,
     languages: <Language>[Language.ZH],
   ),
+  @JsonValue('CO')
   colombia(
     capital: 'Bogotá',
     nativeName: 'Colombia',
@@ -561,6 +606,7 @@ enum Country {
     currency: Currency.COP,
     languages: <Language>[Language.ES],
   ),
+  @JsonValue('CR')
   costaRica(
     capital: 'San José',
     nativeName: 'Costa Rica',
@@ -572,6 +618,7 @@ enum Country {
     currency: Currency.CRC,
     languages: <Language>[Language.ES],
   ),
+  @JsonValue('CU')
   cuba(
     capital: 'Havana',
     nativeName: 'Cuba',
@@ -583,6 +630,7 @@ enum Country {
     currency: Currency.CUP,
     languages: <Language>[Language.ES],
   ),
+  @JsonValue('CV')
   capeVerde(
     capital: 'Praia',
     nativeName: 'Cabo Verde',
@@ -594,6 +642,7 @@ enum Country {
     currency: Currency.CVE,
     languages: <Language>[Language.PT],
   ),
+  @JsonValue('CW')
   curacao(
     capital: 'Willemstad',
     nativeName: 'Curaçao',
@@ -605,6 +654,7 @@ enum Country {
     currency: Currency.ANG,
     languages: <Language>[Language.NL, Language.PA, Language.EN],
   ),
+  @JsonValue('CX')
   christmasIsland(
     capital: 'Flying Fish Cove',
     nativeName: 'Christmas Island',
@@ -616,6 +666,7 @@ enum Country {
     currency: Currency.AUD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('CY')
   cyprus(
     capital: 'Nicosia',
     nativeName: 'Κύπρος',
@@ -627,6 +678,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.EL, Language.TR, Language.HY],
   ),
+  @JsonValue('CZ')
   czechRepublic(
     capital: 'Prague',
     nativeName: 'Česká republika',
@@ -638,6 +690,7 @@ enum Country {
     currency: Currency.CZK,
     languages: <Language>[Language.CS, Language.SK],
   ),
+  @JsonValue('DE')
   germany(
     capital: 'Berlin',
     nativeName: 'Deutschland',
@@ -649,6 +702,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.DE],
   ),
+  @JsonValue('DJ')
   djibouti(
     capital: 'Djibouti',
     nativeName: 'Djibouti',
@@ -660,6 +714,7 @@ enum Country {
     currency: Currency.DJF,
     languages: <Language>[Language.FR, Language.AR],
   ),
+  @JsonValue('DK')
   denmark(
     capital: 'Copenhagen',
     nativeName: 'Danmark',
@@ -671,6 +726,7 @@ enum Country {
     currency: Currency.DKK,
     languages: <Language>[Language.DA],
   ),
+  @JsonValue('DM')
   dominica(
     capital: 'Roseau',
     nativeName: 'Dominica',
@@ -682,6 +738,7 @@ enum Country {
     currency: Currency.XCD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('DO')
   dominicanRepublic(
     capital: 'Santo Domingo',
     nativeName: 'República Dominicana',
@@ -693,6 +750,7 @@ enum Country {
     currency: Currency.DOP,
     languages: <Language>[Language.ES],
   ),
+  @JsonValue('DZ')
   algeria(
     capital: 'Algiers',
     nativeName: 'الجزائر',
@@ -704,6 +762,7 @@ enum Country {
     currency: Currency.DZD,
     languages: <Language>[Language.AR],
   ),
+  @JsonValue('EC')
   ecuador(
     capital: 'Quito',
     nativeName: 'Ecuador',
@@ -715,6 +774,7 @@ enum Country {
     currency: Currency.USD,
     languages: <Language>[Language.ES],
   ),
+  @JsonValue('EE')
   estonia(
     capital: 'Tallinn',
     nativeName: 'Eesti',
@@ -726,6 +786,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.ET],
   ),
+  @JsonValue('EG')
   egypt(
     capital: 'Cairo',
     nativeName: 'مصر',
@@ -737,6 +798,7 @@ enum Country {
     currency: Currency.EGP,
     languages: <Language>[Language.AR],
   ),
+  @JsonValue('EH')
   westernSahara(
     capital: 'El Aaiún',
     nativeName: 'الصحراء الغربية',
@@ -748,6 +810,7 @@ enum Country {
     currency: Currency.MAD,
     languages: <Language>[Language.ES],
   ),
+  @JsonValue('ER')
   eritrea(
     capital: 'Asmara',
     nativeName: 'ኤርትራ',
@@ -759,6 +822,7 @@ enum Country {
     currency: Currency.ERN,
     languages: <Language>[Language.TI, Language.AR, Language.EN],
   ),
+  @JsonValue('ES')
   spain(
     capital: 'Madrid',
     nativeName: 'España',
@@ -776,6 +840,7 @@ enum Country {
       Language.OC,
     ],
   ),
+  @JsonValue('ET')
   ethiopia(
     capital: 'Addis Ababa',
     nativeName: 'ኢትዮጵያ',
@@ -787,6 +852,7 @@ enum Country {
     currency: Currency.ETB,
     languages: <Language>[Language.AM],
   ),
+  @JsonValue('FI')
   finland(
     capital: 'Helsinki',
     nativeName: 'Suomi',
@@ -798,6 +864,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.FI, Language.SV],
   ),
+  @JsonValue('FJ')
   fiji(
     capital: 'Suva',
     nativeName: 'Fiji',
@@ -809,6 +876,7 @@ enum Country {
     currency: Currency.FJD,
     languages: <Language>[Language.EN, Language.FJ, Language.HI, Language.UR],
   ),
+  @JsonValue('FK')
   falklandIslands(
     capital: 'Stanley',
     nativeName: 'Falkland Islands',
@@ -820,6 +888,7 @@ enum Country {
     currency: Currency.FKP,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('FM')
   micronesia(
     capital: 'Palikir',
     nativeName: 'Micronesia',
@@ -831,6 +900,7 @@ enum Country {
     currency: Currency.USD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('FO')
   faroeIslands(
     capital: 'Tórshavn',
     nativeName: 'Føroyar',
@@ -842,6 +912,7 @@ enum Country {
     currency: Currency.DKK,
     languages: <Language>[Language.FO],
   ),
+  @JsonValue('FR')
   france(
     capital: 'Paris',
     nativeName: 'France',
@@ -853,6 +924,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('GA')
   gabon(
     capital: 'Libreville',
     nativeName: 'Gabon',
@@ -864,6 +936,7 @@ enum Country {
     currency: Currency.XAF,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('GB')
   unitedKingdom(
     capital: 'London',
     nativeName: 'United Kingdom',
@@ -875,6 +948,7 @@ enum Country {
     currency: Currency.GBP,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('GD')
   grenada(
     capital: '''St. George's''',
     nativeName: 'Grenada',
@@ -886,6 +960,7 @@ enum Country {
     currency: Currency.XCD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('GE')
   georgia(
     capital: 'Tbilisi',
     nativeName: 'საქართველო',
@@ -897,6 +972,7 @@ enum Country {
     currency: Currency.GEL,
     languages: <Language>[Language.KA],
   ),
+  @JsonValue('GF')
   frenchGuiana(
     capital: 'Cayenne',
     nativeName: 'Guyane française',
@@ -908,6 +984,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('GG')
   guernsey(
     capital: 'St. Peter Port',
     nativeName: 'Guernsey',
@@ -919,6 +996,7 @@ enum Country {
     currency: Currency.GBP,
     languages: <Language>[Language.EN, Language.FR],
   ),
+  @JsonValue('GH')
   ghana(
     capital: 'Accra',
     nativeName: 'Ghana',
@@ -930,6 +1008,7 @@ enum Country {
     currency: Currency.GHS,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('GI')
   gibraltar(
     capital: 'Gibraltar',
     nativeName: 'Gibraltar',
@@ -941,6 +1020,7 @@ enum Country {
     currency: Currency.GIP,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('GL')
   greenland(
     capital: 'Nuuk',
     nativeName: 'Kalaallit Nunaat',
@@ -952,6 +1032,7 @@ enum Country {
     currency: Currency.DKK,
     languages: <Language>[Language.KL],
   ),
+  @JsonValue('GM')
   gambia(
     capital: 'Banjul',
     nativeName: 'Gambia',
@@ -963,6 +1044,7 @@ enum Country {
     currency: Currency.GMD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('GN')
   guinea(
     capital: 'Conakry',
     nativeName: 'Guinée',
@@ -974,6 +1056,7 @@ enum Country {
     currency: Currency.GNF,
     languages: <Language>[Language.FR, Language.FF],
   ),
+  @JsonValue('GP')
   guadeloupe(
     capital: 'Basse-Terre',
     nativeName: 'Guadeloupe',
@@ -985,6 +1068,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('GQ')
   equatorialGuinea(
     capital: 'Malabo',
     nativeName: 'Guinea Ecuatorial',
@@ -996,6 +1080,7 @@ enum Country {
     currency: Currency.XAF,
     languages: <Language>[Language.ES, Language.FR],
   ),
+  @JsonValue('GR')
   greece(
     capital: 'Athens',
     nativeName: 'Ελλάδα',
@@ -1007,6 +1092,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.EL],
   ),
+  @JsonValue('GT')
   guatemala(
     capital: 'Guatemala City',
     nativeName: 'Guatemala',
@@ -1018,6 +1104,7 @@ enum Country {
     currency: Currency.GTQ,
     languages: <Language>[Language.ES],
   ),
+  @JsonValue('GU')
   guam(
     capital: 'Hagåtña',
     nativeName: 'Guam',
@@ -1029,6 +1116,7 @@ enum Country {
     currency: Currency.USD,
     languages: <Language>[Language.EN, Language.CH, Language.ES],
   ),
+  @JsonValue('GW')
   guineaBissau(
     capital: 'Bissau',
     nativeName: 'Guiné-Bissau',
@@ -1040,6 +1128,7 @@ enum Country {
     currency: Currency.XOF,
     languages: <Language>[Language.PT],
   ),
+  @JsonValue('GY')
   guyana(
     capital: 'Georgetown',
     nativeName: 'Guyana',
@@ -1051,6 +1140,7 @@ enum Country {
     currency: Currency.GYD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('HK')
   hongKong(
     capital: 'City of Victoria',
     nativeName: '香港',
@@ -1062,6 +1152,7 @@ enum Country {
     currency: Currency.HKD,
     languages: <Language>[Language.ZH, Language.EN],
   ),
+  @JsonValue('HN')
   honduras(
     capital: 'Tegucigalpa',
     nativeName: 'Honduras',
@@ -1073,6 +1164,7 @@ enum Country {
     currency: Currency.HNL,
     languages: <Language>[Language.ES],
   ),
+  @JsonValue('HR')
   croatia(
     capital: 'Zagreb',
     nativeName: 'Hrvatska',
@@ -1084,6 +1176,7 @@ enum Country {
     currency: Currency.HRK,
     languages: <Language>[Language.HR],
   ),
+  @JsonValue('HT')
   haiti(
     capital: 'Port-au-Prince',
     nativeName: 'Haïti',
@@ -1095,6 +1188,7 @@ enum Country {
     currency: Currency.HTG,
     languages: <Language>[Language.FR, Language.HT],
   ),
+  @JsonValue('HU')
   hungary(
     capital: 'Budapest',
     nativeName: 'Magyarország',
@@ -1106,6 +1200,7 @@ enum Country {
     currency: Currency.HUF,
     languages: <Language>[Language.HU],
   ),
+  @JsonValue('ID')
   indonesia(
     capital: 'Jakarta',
     nativeName: 'Indonesia',
@@ -1117,6 +1212,7 @@ enum Country {
     currency: Currency.IDR,
     languages: <Language>[Language.ID],
   ),
+  @JsonValue('IE')
   ireland(
     capital: 'Dublin',
     nativeName: 'Éire',
@@ -1128,6 +1224,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.GA, Language.EN],
   ),
+  @JsonValue('IL')
   israel(
     capital: 'Jerusalem',
     nativeName: 'יִשְׂרָאֵל',
@@ -1139,6 +1236,7 @@ enum Country {
     currency: Currency.ILS,
     languages: <Language>[Language.HE, Language.AR],
   ),
+  @JsonValue('IM')
   isleOfMan(
     capital: 'Douglas',
     nativeName: 'Isle of Man',
@@ -1150,6 +1248,7 @@ enum Country {
     currency: Currency.GBP,
     languages: <Language>[Language.EN, Language.GV],
   ),
+  @JsonValue('IN')
   india(
     capital: 'New Delhi',
     nativeName: 'भारत',
@@ -1161,6 +1260,7 @@ enum Country {
     currency: Currency.INR,
     languages: <Language>[Language.HI, Language.EN],
   ),
+  @JsonValue('IO')
   britishIndianOceanTerritory(
     capital: 'Diego Garcia',
     nativeName: 'British Indian Ocean Territory',
@@ -1172,6 +1272,7 @@ enum Country {
     currency: Currency.USD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('IQ')
   iraq(
     capital: 'Baghdad',
     nativeName: 'العراق',
@@ -1183,6 +1284,7 @@ enum Country {
     currency: Currency.IQD,
     languages: <Language>[Language.AR, Language.KU],
   ),
+  @JsonValue('IR')
   iran(
     capital: 'Tehran',
     nativeName: 'ایران',
@@ -1194,6 +1296,7 @@ enum Country {
     currency: Currency.IRR,
     languages: <Language>[Language.FA],
   ),
+  @JsonValue('IS')
   iceland(
     capital: 'Reykjavik',
     nativeName: 'Ísland',
@@ -1205,6 +1308,7 @@ enum Country {
     currency: Currency.ISK,
     languages: <Language>[Language.IS],
   ),
+  @JsonValue('IT')
   italy(
     capital: 'Rome',
     nativeName: 'Italia',
@@ -1216,6 +1320,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.IT],
   ),
+  @JsonValue('JE')
   jersey(
     capital: 'Saint Helier',
     nativeName: 'Jersey',
@@ -1227,6 +1332,7 @@ enum Country {
     currency: Currency.GBP,
     languages: <Language>[Language.EN, Language.FR],
   ),
+  @JsonValue('JM')
   jamaica(
     capital: 'Kingston',
     nativeName: 'Jamaica',
@@ -1238,6 +1344,7 @@ enum Country {
     currency: Currency.JMD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('JO')
   jordan(
     capital: 'Amman',
     nativeName: 'الأردن',
@@ -1249,6 +1356,7 @@ enum Country {
     currency: Currency.JOD,
     languages: <Language>[Language.AR],
   ),
+  @JsonValue('JP')
   japan(
     capital: 'Tokyo',
     nativeName: '日本',
@@ -1260,6 +1368,7 @@ enum Country {
     currency: Currency.JPY,
     languages: <Language>[Language.JA],
   ),
+  @JsonValue('KE')
   kenya(
     capital: 'Nairobi',
     nativeName: 'Kenya',
@@ -1271,6 +1380,7 @@ enum Country {
     currency: Currency.KES,
     languages: <Language>[Language.EN, Language.SW],
   ),
+  @JsonValue('KG')
   kyrgyzstan(
     capital: 'Bishkek',
     nativeName: 'Кыргызстан',
@@ -1282,6 +1392,7 @@ enum Country {
     currency: Currency.KGS,
     languages: <Language>[Language.KY, Language.RU],
   ),
+  @JsonValue('KH')
   cambodia(
     capital: 'Phnom Penh',
     nativeName: 'Kâmpŭchéa',
@@ -1293,6 +1404,7 @@ enum Country {
     currency: Currency.KHR,
     languages: <Language>[Language.KM],
   ),
+  @JsonValue('KI')
   kiribati(
     capital: 'South Tarawa',
     nativeName: 'Kiribati',
@@ -1304,6 +1416,7 @@ enum Country {
     currency: Currency.AUD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('KM')
   comoros(
     capital: 'Moroni',
     nativeName: 'Komori',
@@ -1315,6 +1428,7 @@ enum Country {
     currency: Currency.KMF,
     languages: <Language>[Language.AR, Language.FR],
   ),
+  @JsonValue('KN')
   saintKittsAndNevis(
     capital: 'Basseterre',
     nativeName: 'Saint Kitts and Nevis',
@@ -1326,6 +1440,7 @@ enum Country {
     currency: Currency.XCD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('KP')
   northKorea(
     capital: 'Pyongyang',
     nativeName: '북한',
@@ -1337,6 +1452,7 @@ enum Country {
     currency: Currency.KPW,
     languages: <Language>[Language.KO],
   ),
+  @JsonValue('KR')
   southKorea(
     capital: 'Seoul',
     nativeName: '대한민국',
@@ -1348,6 +1464,7 @@ enum Country {
     currency: Currency.KRW,
     languages: <Language>[Language.KO],
   ),
+  @JsonValue('KW')
   kuwait(
     capital: 'Kuwait City',
     nativeName: 'الكويت',
@@ -1359,6 +1476,7 @@ enum Country {
     currency: Currency.KWD,
     languages: <Language>[Language.AR],
   ),
+  @JsonValue('KY')
   caymanIslands(
     capital: 'George Town',
     nativeName: 'Cayman Islands',
@@ -1370,6 +1488,7 @@ enum Country {
     currency: Currency.KYD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('KZ')
   kazakhstan(
     capital: 'Astana',
     nativeName: 'Қазақстан',
@@ -1381,6 +1500,7 @@ enum Country {
     currency: Currency.KZT,
     languages: <Language>[Language.KK, Language.RU],
   ),
+  @JsonValue('LA')
   laos(
     capital: 'Vientiane',
     nativeName: 'ສປປລາວ',
@@ -1392,6 +1512,7 @@ enum Country {
     currency: Currency.LAK,
     languages: <Language>[Language.LO],
   ),
+  @JsonValue('LB')
   lebanon(
     capital: 'Beirut',
     nativeName: 'لبنان',
@@ -1403,6 +1524,7 @@ enum Country {
     currency: Currency.LBP,
     languages: <Language>[Language.AR, Language.FR],
   ),
+  @JsonValue('LC')
   saintLucia(
     capital: 'Castries',
     nativeName: 'Saint Lucia',
@@ -1414,6 +1536,7 @@ enum Country {
     currency: Currency.XCD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('LI')
   liechtenstein(
     capital: 'Vaduz',
     nativeName: 'Liechtenstein',
@@ -1425,6 +1548,7 @@ enum Country {
     currency: Currency.CHF,
     languages: <Language>[Language.DE],
   ),
+  @JsonValue('LK')
   sriLanka(
     capital: 'Colombo',
     nativeName: 'śrī laṃkāva',
@@ -1436,6 +1560,7 @@ enum Country {
     currency: Currency.LKR,
     languages: <Language>[Language.SI, Language.TA],
   ),
+  @JsonValue('LR')
   liberia(
     capital: 'Monrovia',
     nativeName: 'Liberia',
@@ -1447,6 +1572,7 @@ enum Country {
     currency: Currency.LRD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('LS')
   lesotho(
     capital: 'Maseru',
     nativeName: 'Lesotho',
@@ -1458,6 +1584,7 @@ enum Country {
     currency: Currency.LSL,
     languages: <Language>[Language.EN, Language.ST],
   ),
+  @JsonValue('LT')
   lithuania(
     capital: 'Vilnius',
     nativeName: 'Lietuva',
@@ -1469,6 +1596,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.LT],
   ),
+  @JsonValue('LU')
   luxembourg(
     capital: 'Luxembourg',
     nativeName: 'Luxembourg',
@@ -1480,6 +1608,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.FR, Language.DE, Language.LB],
   ),
+  @JsonValue('LV')
   latvia(
     capital: 'Riga',
     nativeName: 'Latvija',
@@ -1491,6 +1620,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.LV],
   ),
+  @JsonValue('LY')
   libya(
     capital: 'Tripoli',
     nativeName: 'ليبيا',
@@ -1502,6 +1632,7 @@ enum Country {
     currency: Currency.LYD,
     languages: <Language>[Language.AR],
   ),
+  @JsonValue('MA')
   morocco(
     capital: 'Rabat',
     nativeName: 'المغرب',
@@ -1513,6 +1644,7 @@ enum Country {
     currency: Currency.MAD,
     languages: <Language>[Language.AR],
   ),
+  @JsonValue('MC')
   monaco(
     capital: 'Monaco',
     nativeName: 'Monaco',
@@ -1524,6 +1656,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('MD')
   moldova(
     capital: 'Chișinău',
     nativeName: 'Moldova',
@@ -1535,6 +1668,7 @@ enum Country {
     currency: Currency.MDL,
     languages: <Language>[Language.RO],
   ),
+  @JsonValue('ME')
   montenegro(
     capital: 'Podgorica',
     nativeName: 'Црна Гора',
@@ -1546,6 +1680,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.SR, Language.BS, Language.SQ, Language.HR],
   ),
+  @JsonValue('MF')
   saintMartin(
     capital: 'Marigot',
     nativeName: 'Saint-Martin',
@@ -1557,6 +1692,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.EN, Language.FR, Language.NL],
   ),
+  @JsonValue('MG')
   madagascar(
     capital: 'Antananarivo',
     nativeName: 'Madagasikara',
@@ -1568,6 +1704,7 @@ enum Country {
     currency: Currency.MGA,
     languages: <Language>[Language.FR, Language.MG],
   ),
+  @JsonValue('MH')
   marshallIslands(
     capital: 'Majuro',
     nativeName: 'M̧ajeļ',
@@ -1579,6 +1716,7 @@ enum Country {
     currency: Currency.USD,
     languages: <Language>[Language.EN, Language.MH],
   ),
+  @JsonValue('MK')
   northMacedonia(
     capital: 'Skopje',
     nativeName: 'Северна Македонија',
@@ -1590,6 +1728,7 @@ enum Country {
     currency: Currency.MKD,
     languages: <Language>[Language.MK],
   ),
+  @JsonValue('ML')
   mali(
     capital: 'Bamako',
     nativeName: 'Mali',
@@ -1601,6 +1740,7 @@ enum Country {
     currency: Currency.XOF,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('MM')
   myanmarBurma(
     capital: 'Naypyidaw',
     nativeName: 'မြန်မာ',
@@ -1612,6 +1752,7 @@ enum Country {
     currency: Currency.MMK,
     languages: <Language>[Language.MY],
   ),
+  @JsonValue('MN')
   mongolia(
     capital: 'Ulan Bator',
     nativeName: 'Монгол улс',
@@ -1623,6 +1764,7 @@ enum Country {
     currency: Currency.MNT,
     languages: <Language>[Language.MN],
   ),
+  @JsonValue('MO')
   macao(
     capital: 'Macao',
     nativeName: '澳門',
@@ -1634,6 +1776,7 @@ enum Country {
     currency: Currency.MOP,
     languages: <Language>[Language.ZH, Language.PT],
   ),
+  @JsonValue('MP')
   northernMarianaIslands(
     capital: 'Saipan',
     nativeName: 'Northern Mariana Islands',
@@ -1645,6 +1788,7 @@ enum Country {
     currency: Currency.USD,
     languages: <Language>[Language.EN, Language.CH],
   ),
+  @JsonValue('MQ')
   martinique(
     capital: 'Fort-de-France',
     nativeName: 'Martinique',
@@ -1656,6 +1800,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('MR')
   mauritania(
     capital: 'Nouakchott',
     nativeName: 'موريتانيا',
@@ -1667,6 +1812,7 @@ enum Country {
     currency: Currency.MRU,
     languages: <Language>[Language.AR],
   ),
+  @JsonValue('MS')
   montserrat(
     capital: 'Plymouth',
     nativeName: 'Montserrat',
@@ -1678,6 +1824,7 @@ enum Country {
     currency: Currency.XCD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('MT')
   malta(
     capital: 'Valletta',
     nativeName: 'Malta',
@@ -1689,6 +1836,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.MT, Language.EN],
   ),
+  @JsonValue('MU')
   mauritius(
     capital: 'Port Louis',
     nativeName: 'Maurice',
@@ -1700,6 +1848,7 @@ enum Country {
     currency: Currency.MUR,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('MV')
   maldives(
     capital: 'Malé',
     nativeName: 'Maldives',
@@ -1711,6 +1860,7 @@ enum Country {
     currency: Currency.MVR,
     languages: <Language>[Language.DV],
   ),
+  @JsonValue('MW')
   malawi(
     capital: 'Lilongwe',
     nativeName: 'Malawi',
@@ -1722,6 +1872,7 @@ enum Country {
     currency: Currency.MWK,
     languages: <Language>[Language.EN, Language.NY],
   ),
+  @JsonValue('MX')
   mexico(
     capital: 'Mexico City',
     nativeName: 'México',
@@ -1733,6 +1884,7 @@ enum Country {
     currency: Currency.MXN,
     languages: <Language>[Language.ES],
   ),
+  @JsonValue('MY')
   malaysia(
     capital: 'Kuala Lumpur',
     nativeName: 'Malaysia',
@@ -1744,6 +1896,7 @@ enum Country {
     currency: Currency.MYR,
     languages: <Language>[Language.MS],
   ),
+  @JsonValue('MZ')
   mozambique(
     capital: 'Maputo',
     nativeName: 'Moçambique',
@@ -1755,6 +1908,7 @@ enum Country {
     currency: Currency.MZN,
     languages: <Language>[Language.PT],
   ),
+  @JsonValue('NA')
   namibia(
     capital: 'Windhoek',
     nativeName: 'Namibia',
@@ -1766,6 +1920,7 @@ enum Country {
     currency: Currency.NAD,
     languages: <Language>[Language.EN, Language.AF],
   ),
+  @JsonValue('NC')
   newCaledonia(
     capital: 'Nouméa',
     nativeName: 'Nouvelle-Calédonie',
@@ -1777,6 +1932,7 @@ enum Country {
     currency: Currency.XPF,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('NE')
   niger(
     capital: 'Niamey',
     nativeName: 'Niger',
@@ -1788,6 +1944,7 @@ enum Country {
     currency: Currency.XOF,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('NF')
   norfolkIsland(
     capital: 'Kingston',
     nativeName: 'Norfolk Island',
@@ -1799,6 +1956,7 @@ enum Country {
     currency: Currency.AUD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('NG')
   nigeria(
     capital: 'Abuja',
     nativeName: 'Nigeria',
@@ -1810,6 +1968,7 @@ enum Country {
     currency: Currency.NGN,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('NI')
   nicaragua(
     capital: 'Managua',
     nativeName: 'Nicaragua',
@@ -1821,6 +1980,7 @@ enum Country {
     currency: Currency.NIO,
     languages: <Language>[Language.ES],
   ),
+  @JsonValue('NL')
   netherlands(
     capital: 'Amsterdam',
     nativeName: 'Nederland',
@@ -1832,6 +1992,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.NL],
   ),
+  @JsonValue('NO')
   norway(
     capital: 'Oslo',
     nativeName: 'Norge',
@@ -1843,6 +2004,7 @@ enum Country {
     currency: Currency.NOK,
     languages: <Language>[Language.NO, Language.NB, Language.NN],
   ),
+  @JsonValue('NP')
   nepal(
     capital: 'Kathmandu',
     nativeName: 'नपल',
@@ -1854,6 +2016,7 @@ enum Country {
     currency: Currency.NPR,
     languages: <Language>[Language.NE],
   ),
+  @JsonValue('NR')
   nauru(
     capital: 'Yaren',
     nativeName: 'Nauru',
@@ -1865,6 +2028,7 @@ enum Country {
     currency: Currency.AUD,
     languages: <Language>[Language.EN, Language.NA],
   ),
+  @JsonValue('NU')
   niue(
     capital: 'Alofi',
     nativeName: 'Niuē',
@@ -1876,6 +2040,7 @@ enum Country {
     currency: Currency.NZD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('NZ')
   newZealand(
     capital: 'Wellington',
     nativeName: 'New Zealand',
@@ -1887,6 +2052,7 @@ enum Country {
     currency: Currency.NZD,
     languages: <Language>[Language.EN, Language.MI],
   ),
+  @JsonValue('OM')
   oman(
     capital: 'Muscat',
     nativeName: 'عمان',
@@ -1898,6 +2064,7 @@ enum Country {
     currency: Currency.OMR,
     languages: <Language>[Language.AR],
   ),
+  @JsonValue('PA')
   panama(
     capital: 'Panama City',
     nativeName: 'Panamá',
@@ -1909,6 +2076,7 @@ enum Country {
     currency: Currency.PAB,
     languages: <Language>[Language.ES],
   ),
+  @JsonValue('PE')
   peru(
     capital: 'Lima',
     nativeName: 'Perú',
@@ -1920,6 +2088,7 @@ enum Country {
     currency: Currency.PEN,
     languages: <Language>[Language.ES],
   ),
+  @JsonValue('PF')
   frenchPolynesia(
     capital: 'Papeetē',
     nativeName: 'Polynésie française',
@@ -1931,6 +2100,7 @@ enum Country {
     currency: Currency.XPF,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('PG')
   papuaNewGuinea(
     capital: 'Port Moresby',
     nativeName: 'Papua Niugini',
@@ -1942,6 +2112,7 @@ enum Country {
     currency: Currency.PGK,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('PH')
   philippines(
     capital: 'Manila',
     nativeName: 'Pilipinas',
@@ -1953,6 +2124,7 @@ enum Country {
     currency: Currency.PHP,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('PK')
   pakistan(
     capital: 'Islamabad',
     nativeName: 'Pakistan',
@@ -1964,6 +2136,7 @@ enum Country {
     currency: Currency.PKR,
     languages: <Language>[Language.EN, Language.UR],
   ),
+  @JsonValue('PL')
   poland(
     capital: 'Warsaw',
     nativeName: 'Polska',
@@ -1975,6 +2148,7 @@ enum Country {
     currency: Currency.PLN,
     languages: <Language>[Language.PL],
   ),
+  @JsonValue('PM')
   saintPierreAndMiquelon(
     capital: 'Saint-Pierre',
     nativeName: 'Saint-Pierre-et-Miquelon',
@@ -1986,6 +2160,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('PR')
   puertoRico(
     capital: 'San Juan',
     nativeName: 'Puerto Rico',
@@ -1997,6 +2172,7 @@ enum Country {
     currency: Currency.USD,
     languages: <Language>[Language.ES, Language.EN],
   ),
+  @JsonValue('PS')
   palestine(
     capital: 'Ramallah',
     nativeName: 'فلسطين',
@@ -2008,6 +2184,7 @@ enum Country {
     currency: Currency.ILS,
     languages: <Language>[Language.AR],
   ),
+  @JsonValue('PT')
   portugal(
     capital: 'Lisbon',
     nativeName: 'Portugal',
@@ -2019,6 +2196,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.PT],
   ),
+  @JsonValue('PW')
   palau(
     capital: 'Ngerulmud',
     nativeName: 'Palau',
@@ -2030,6 +2208,7 @@ enum Country {
     currency: Currency.USD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('PY')
   paraguay(
     capital: 'Asunción',
     nativeName: 'Paraguay',
@@ -2041,6 +2220,7 @@ enum Country {
     currency: Currency.PYG,
     languages: <Language>[Language.ES, Language.GN],
   ),
+  @JsonValue('QA')
   qatar(
     capital: 'Doha',
     nativeName: 'قطر',
@@ -2052,6 +2232,7 @@ enum Country {
     currency: Currency.QAR,
     languages: <Language>[Language.AR],
   ),
+  @JsonValue('RE')
   reunion(
     capital: 'Saint-Denis',
     nativeName: 'La Réunion',
@@ -2063,6 +2244,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('RO')
   romania(
     capital: 'Bucharest',
     nativeName: 'România',
@@ -2074,6 +2256,7 @@ enum Country {
     currency: Currency.RON,
     languages: <Language>[Language.RO],
   ),
+  @JsonValue('RS')
   serbia(
     capital: 'Belgrade',
     nativeName: 'Србија',
@@ -2085,6 +2268,7 @@ enum Country {
     currency: Currency.RSD,
     languages: <Language>[Language.SR],
   ),
+  @JsonValue('RU')
   russia(
     capital: 'Moscow',
     nativeName: 'Россия',
@@ -2096,6 +2280,7 @@ enum Country {
     currency: Currency.RUB,
     languages: <Language>[Language.RU],
   ),
+  @JsonValue('RW')
   rwanda(
     capital: 'Kigali',
     nativeName: 'Rwanda',
@@ -2107,6 +2292,7 @@ enum Country {
     currency: Currency.RWF,
     languages: <Language>[Language.RW, Language.EN, Language.FR],
   ),
+  @JsonValue('SA')
   saudiArabia(
     capital: 'Riyadh',
     nativeName: 'العربية السعودية',
@@ -2118,6 +2304,7 @@ enum Country {
     currency: Currency.SAR,
     languages: <Language>[Language.AR],
   ),
+  @JsonValue('SB')
   solomonIslands(
     capital: 'Honiara',
     nativeName: 'Solomon Islands',
@@ -2129,6 +2316,7 @@ enum Country {
     currency: Currency.SBD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('SC')
   seychelles(
     capital: 'Victoria',
     nativeName: 'Seychelles',
@@ -2140,6 +2328,7 @@ enum Country {
     currency: Currency.SCR,
     languages: <Language>[Language.FR, Language.EN],
   ),
+  @JsonValue('SD')
   sudan(
     capital: 'Khartoum',
     nativeName: 'السودان',
@@ -2151,6 +2340,7 @@ enum Country {
     currency: Currency.SDG,
     languages: <Language>[Language.AR, Language.EN],
   ),
+  @JsonValue('SE')
   sweden(
     capital: 'Stockholm',
     nativeName: 'Sverige',
@@ -2162,6 +2352,7 @@ enum Country {
     currency: Currency.SEK,
     languages: <Language>[Language.SV],
   ),
+  @JsonValue('SG')
   singapore(
     capital: 'Singapore',
     nativeName: 'Singapore',
@@ -2173,6 +2364,7 @@ enum Country {
     currency: Currency.SGD,
     languages: <Language>[Language.EN, Language.MS, Language.TA, Language.ZH],
   ),
+  @JsonValue('SH')
   saintHelena(
     capital: 'Jamestown',
     nativeName: 'Saint Helena',
@@ -2184,6 +2376,7 @@ enum Country {
     currency: Currency.SHP,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('SI')
   slovenia(
     capital: 'Ljubljana',
     nativeName: 'Slovenija',
@@ -2195,6 +2388,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.SL],
   ),
+  @JsonValue('SJ')
   svalbardAndJanMayen(
     capital: 'Longyearbyen',
     nativeName: 'Svalbard og Jan Mayen',
@@ -2206,6 +2400,7 @@ enum Country {
     currency: Currency.NOK,
     languages: <Language>[Language.NO],
   ),
+  @JsonValue('SK')
   slovakia(
     capital: 'Bratislava',
     nativeName: 'Slovensko',
@@ -2217,6 +2412,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.SK],
   ),
+  @JsonValue('SL')
   sierraLeone(
     capital: 'Freetown',
     nativeName: 'Sierra Leone',
@@ -2228,6 +2424,7 @@ enum Country {
     currency: Currency.SLL,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('SM')
   sanMarino(
     capital: 'City of San Marino',
     nativeName: 'San Marino',
@@ -2239,6 +2436,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.IT],
   ),
+  @JsonValue('SN')
   senegal(
     capital: 'Dakar',
     nativeName: 'Sénégal',
@@ -2250,6 +2448,7 @@ enum Country {
     currency: Currency.XOF,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('SO')
   somalia(
     capital: 'Mogadishu',
     nativeName: 'Soomaaliya',
@@ -2261,6 +2460,7 @@ enum Country {
     currency: Currency.SOS,
     languages: <Language>[Language.SO, Language.AR],
   ),
+  @JsonValue('SR')
   suriname(
     capital: 'Paramaribo',
     nativeName: 'Suriname',
@@ -2272,6 +2472,7 @@ enum Country {
     currency: Currency.SRD,
     languages: <Language>[Language.NL],
   ),
+  @JsonValue('SS')
   southSudan(
     capital: 'Juba',
     nativeName: 'South Sudan',
@@ -2283,6 +2484,7 @@ enum Country {
     currency: Currency.SSP,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('ST')
   saoTomeAndPrincipe(
     capital: 'São Tomé',
     nativeName: 'São Tomé e Príncipe',
@@ -2294,6 +2496,7 @@ enum Country {
     currency: Currency.STN,
     languages: <Language>[Language.PT],
   ),
+  @JsonValue('SV')
   elSalvador(
     capital: 'San Salvador',
     nativeName: 'El Salvador',
@@ -2305,6 +2508,7 @@ enum Country {
     currency: Currency.SVC,
     languages: <Language>[Language.ES],
   ),
+  @JsonValue('SX')
   sintMaarten(
     capital: 'Philipsburg',
     nativeName: 'Sint Maarten',
@@ -2316,6 +2520,7 @@ enum Country {
     currency: Currency.ANG,
     languages: <Language>[Language.NL, Language.EN],
   ),
+  @JsonValue('SY')
   syria(
     capital: 'Damascus',
     nativeName: 'سوريا',
@@ -2327,6 +2532,7 @@ enum Country {
     currency: Currency.SYP,
     languages: <Language>[Language.AR],
   ),
+  @JsonValue('SZ')
   swaziland(
     capital: 'Lobamba',
     nativeName: 'Swaziland',
@@ -2338,6 +2544,7 @@ enum Country {
     currency: Currency.SZL,
     languages: <Language>[Language.EN, Language.SS],
   ),
+  @JsonValue('TA')
   tristanDaCunha(
     capital: 'Edinburgh of the Seven Seas',
     nativeName: 'Tristan da Cunha',
@@ -2349,6 +2556,7 @@ enum Country {
     currency: Currency.GBP,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('TC')
   turksAndCaicosIslands(
     capital: 'Cockburn Town',
     nativeName: 'Turks and Caicos Islands',
@@ -2360,6 +2568,7 @@ enum Country {
     currency: Currency.USD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('TR')
   turkey(
     capital: 'Ankara',
     nativeName: 'Türkiye',
@@ -2371,6 +2580,7 @@ enum Country {
     currency: Currency.TRY,
     languages: <Language>[Language.TR],
   ),
+  @JsonValue('TD')
   chad(
     capital: '''N'Djamena''',
     nativeName: 'Tchad',
@@ -2382,6 +2592,7 @@ enum Country {
     currency: Currency.XAF,
     languages: <Language>[Language.FR, Language.AR],
   ),
+  @JsonValue('TG')
   togo(
     capital: 'Lomé',
     nativeName: 'Togo',
@@ -2393,6 +2604,7 @@ enum Country {
     currency: Currency.XOF,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('TH')
   thailand(
     capital: 'Bangkok',
     nativeName: 'ประเทศไทย',
@@ -2404,6 +2616,7 @@ enum Country {
     currency: Currency.THB,
     languages: <Language>[Language.TH],
   ),
+  @JsonValue('TJ')
   tajikistan(
     capital: 'Dushanbe',
     nativeName: 'Тоҷикистон',
@@ -2415,6 +2628,7 @@ enum Country {
     currency: Currency.TJS,
     languages: <Language>[Language.TG, Language.RU],
   ),
+  @JsonValue('TK')
   tokelau(
     capital: 'Fakaofo',
     nativeName: 'Tokelau',
@@ -2426,6 +2640,7 @@ enum Country {
     currency: Currency.NZD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('TL')
   eastTimor(
     capital: 'Dili',
     nativeName: 'Timor-Leste',
@@ -2437,6 +2652,7 @@ enum Country {
     currency: Currency.USD,
     languages: <Language>[Language.PT],
   ),
+  @JsonValue('TM')
   turkmenistan(
     capital: 'Ashgabat',
     nativeName: 'Türkmenistan',
@@ -2448,6 +2664,7 @@ enum Country {
     currency: Currency.TMT,
     languages: <Language>[Language.TK, Language.RU],
   ),
+  @JsonValue('TN')
   tunisia(
     capital: 'Tunis',
     nativeName: 'تونس',
@@ -2459,6 +2676,7 @@ enum Country {
     currency: Currency.TND,
     languages: <Language>[Language.AR],
   ),
+  @JsonValue('TO')
   tonga(
     capital: '''Nuku'alofa''',
     nativeName: 'Tonga',
@@ -2470,6 +2688,7 @@ enum Country {
     currency: Currency.TOP,
     languages: <Language>[Language.EN, Language.TO],
   ),
+  @JsonValue('TT')
   trinidadAndTobago(
     capital: 'Port of Spain',
     nativeName: 'Trinidad and Tobago',
@@ -2481,6 +2700,7 @@ enum Country {
     currency: Currency.TTD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('TV')
   tuvalu(
     capital: 'Funafuti',
     nativeName: 'Tuvalu',
@@ -2492,6 +2712,7 @@ enum Country {
     currency: Currency.AUD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('TW')
   taiwan(
     capital: 'Taipei',
     nativeName: '臺灣',
@@ -2503,6 +2724,7 @@ enum Country {
     currency: Currency.TWD,
     languages: <Language>[Language.ZH],
   ),
+  @JsonValue('TZ')
   tanzania(
     capital: 'Dodoma',
     nativeName: 'Tanzania',
@@ -2514,6 +2736,7 @@ enum Country {
     currency: Currency.TZS,
     languages: <Language>[Language.SW, Language.EN],
   ),
+  @JsonValue('UA')
   ukraine(
     capital: 'Kyiv',
     nativeName: 'Україна',
@@ -2525,6 +2748,7 @@ enum Country {
     currency: Currency.UAH,
     languages: <Language>[Language.UK],
   ),
+  @JsonValue('UG')
   uganda(
     capital: 'Kampala',
     nativeName: 'Uganda',
@@ -2536,6 +2760,7 @@ enum Country {
     currency: Currency.UGX,
     languages: <Language>[Language.EN, Language.SW],
   ),
+  @JsonValue('US')
   unitedStates(
     capital: 'Washington D.C.',
     nativeName: 'United States',
@@ -2547,6 +2772,7 @@ enum Country {
     currency: Currency.USD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('UY')
   uruguay(
     capital: 'Montevideo',
     nativeName: 'Uruguay',
@@ -2558,6 +2784,7 @@ enum Country {
     currency: Currency.UYU,
     languages: <Language>[Language.ES],
   ),
+  @JsonValue('UZ')
   uzbekistan(
     capital: 'Tashkent',
     nativeName: 'O‘zbekiston',
@@ -2569,6 +2796,7 @@ enum Country {
     currency: Currency.UZS,
     languages: <Language>[Language.UZ, Language.RU],
   ),
+  @JsonValue('VA')
   vaticanCity(
     capital: 'Vatican City',
     nativeName: 'Vaticano',
@@ -2580,6 +2808,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.IT, Language.LA],
   ),
+  @JsonValue('VC')
   saintVincentAndTheGrenadines(
     capital: 'Kingstown',
     nativeName: 'Saint Vincent and the Grenadines',
@@ -2591,6 +2820,7 @@ enum Country {
     currency: Currency.XCD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('VE')
   venezuela(
     capital: 'Caracas',
     nativeName: 'Venezuela',
@@ -2602,6 +2832,7 @@ enum Country {
     currency: Currency.VES,
     languages: <Language>[Language.ES],
   ),
+  @JsonValue('VG')
   britishVirginIslands(
     capital: 'Road Town',
     nativeName: 'British Virgin Islands',
@@ -2613,6 +2844,7 @@ enum Country {
     currency: Currency.USD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('VI')
   usVirginIslands(
     capital: 'Charlotte Amalie',
     nativeName: 'United States Virgin Islands',
@@ -2624,6 +2856,7 @@ enum Country {
     currency: Currency.USD,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('VN')
   vietnam(
     capital: 'Hanoi',
     nativeName: 'Việt Nam',
@@ -2635,6 +2868,7 @@ enum Country {
     currency: Currency.VND,
     languages: <Language>[Language.VI],
   ),
+  @JsonValue('VU')
   vanuatu(
     capital: 'Port Vila',
     nativeName: 'Vanuatu',
@@ -2646,6 +2880,7 @@ enum Country {
     currency: Currency.VUV,
     languages: <Language>[Language.BI, Language.EN, Language.FR],
   ),
+  @JsonValue('WF')
   wallisAndFutuna(
     capital: 'Mata-Utu',
     nativeName: 'Wallis et Futuna',
@@ -2657,6 +2892,7 @@ enum Country {
     currency: Currency.XPF,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('WS')
   samoa(
     capital: 'Apia',
     nativeName: 'Samoa',
@@ -2668,6 +2904,7 @@ enum Country {
     currency: Currency.WST,
     languages: <Language>[Language.SM, Language.EN],
   ),
+  @JsonValue('XK')
   kosovo(
     capital: 'Pristina',
     nativeName: 'Republika e Kosovës',
@@ -2679,6 +2916,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.SQ, Language.SR],
   ),
+  @JsonValue('YE')
   yemen(
     capital: '''Sana'a''',
     nativeName: 'اليَمَن',
@@ -2690,6 +2928,7 @@ enum Country {
     currency: Currency.YER,
     languages: <Language>[Language.AR],
   ),
+  @JsonValue('YT')
   mayotte(
     capital: 'Mamoudzou',
     nativeName: 'Mayotte',
@@ -2701,6 +2940,7 @@ enum Country {
     currency: Currency.EUR,
     languages: <Language>[Language.FR],
   ),
+  @JsonValue('ZA')
   southAfrica(
     capital: 'Pretoria',
     nativeName: 'South Africa',
@@ -2723,6 +2963,7 @@ enum Country {
       Language.ZU,
     ],
   ),
+  @JsonValue('ZM')
   zambia(
     capital: 'Lusaka',
     nativeName: 'Zambia',
@@ -2734,6 +2975,7 @@ enum Country {
     currency: Currency.ZMW,
     languages: <Language>[Language.EN],
   ),
+  @JsonValue('ZW')
   zimbabwe(
     capital: 'Harare',
     nativeName: 'Zimbabwe',
@@ -2785,63 +3027,75 @@ enum Country {
   /// The international dialing code to call the country.
   final DialCode dialCode;
 
-  static Country? _byX<T>(
-    final dynamic val,
-    final _CountryEqualityMarker marker,
-  ) {
-    for (final Country country in Country.values) {
-      final dynamic equal = switch (marker) {
-        _CountryEqualityMarker.iso => country.iso,
-        _CountryEqualityMarker.capital => country.capital,
-        _CountryEqualityMarker.flag => country.flag,
-        _CountryEqualityMarker.fullName => country.fullName,
-        _CountryEqualityMarker.name => country.name,
-        _CountryEqualityMarker.nativeName => country.nativeName,
-        _CountryEqualityMarker.dialCode => country.dialCode,
-      };
-      if (val is T && val == equal) {
-        return country;
-      }
-    }
-
-    return null;
-  }
-
   /// Returns the country matching the provided name.
-  static Country? byName(final dynamic name) =>
-      _byX<String>(name, _CountryEqualityMarker.name);
+  static Country? byName(final dynamic name) => countryFromJson(name);
 
   /// Returns the country matching the provided full name.
-  static Country? byFullName(final dynamic name) =>
-      _byX<String>(name, _CountryEqualityMarker.fullName);
+  static Country? byFullName(final dynamic name) => countryFromJson(name);
 
   /// Returns the country matching the provided native name.
-  static Country? byNativeName(final dynamic name) =>
-      _byX<String>(name, _CountryEqualityMarker.nativeName);
+  static Country? byNativeName(final dynamic name) => countryFromJson(name);
 
   /// Returns the country matching the provided capital.
-  static Country? byCapital(final dynamic capital) =>
-      _byX<String>(capital, _CountryEqualityMarker.capital);
+  static Country? byCapital(final dynamic capital) => countryFromJson(capital);
 
   /// Returns the country matching the provided flag emoji.
-  static Country? byFlag(final dynamic flag) =>
-      _byX<String>(flag, _CountryEqualityMarker.flag);
+  static Country? byFlag(final dynamic flag) => countryFromJson(flag);
 
   /// Returns the country matching the provided ISO code.
-  static Country? byIsoCode(final dynamic iso) =>
-      _byX<IsoCode>(iso, _CountryEqualityMarker.iso);
+  static Country? byIsoCode(final dynamic iso) => countryFromJson(iso);
 
   /// Returns the country matching the provided dial code.
-  static Country? byDialCode(final dynamic dial) =>
-      _byX<DialCode>(dial, _CountryEqualityMarker.dialCode);
+  static Country? byDialCode(final dynamic dial) => countryFromJson(dial);
 }
 
-enum _CountryEqualityMarker {
-  iso,
-  capital,
-  flag,
-  fullName,
-  name,
-  nativeName,
-  dialCode,
+Iterable<String> get countryEnumValues => _$CountryEnumMap.values;
+Map<Country, String> get countryEnumMap => _$CountryEnumMap;
+String? countryToJson(final Country? country) => countryEnumMap[country];
+
+Country? countryFromJson(final Object? country) {
+  if (country is Country) {
+    return country;
+  }
+  if (country is num) {
+    return Country.values.elementAtOrNull(country.toInt());
+  }
+  if (country is int) {
+    return Country.values.elementAtOrNull(country);
+  }
+  for (final Country c in Country.values) {
+    if (country is IsoCode) {
+      if (c.iso == country) {
+        return c;
+      }
+    }
+    if (country is String) {
+      final String cl = country.toLowerCase();
+
+      final bool isISO = c.iso.name.toLowerCase() == cl;
+      final bool isCapital = c.capital.toLowerCase() == cl;
+      final bool isFlag = c.flag.toLowerCase() == cl;
+      final bool isFullName = c.fullName.toLowerCase() == cl;
+      final bool isName = c.name.toLowerCase() == cl;
+      final bool isNativeName = c.nativeName.toLowerCase() == cl;
+      final bool isDialCode = c.dialCode.toString().toLowerCase() == cl;
+
+      if (isISO ||
+          isCapital ||
+          isFlag ||
+          isFullName ||
+          isName ||
+          isNativeName ||
+          isDialCode) {
+        return c;
+      }
+    }
+    if (country is DialCode) {
+      if (c.dialCode == country) {
+        return c;
+      }
+    }
+  }
+
+  return null;
 }

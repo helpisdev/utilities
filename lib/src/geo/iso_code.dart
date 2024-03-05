@@ -20,10 +20,7 @@ part 'iso_code.g.dart';
 /// IsoCode.GB // United Kingdom
 /// IsoCode.FR // France
 /// ```
-@JsonEnum(
-  fieldRename: FieldRename.snake,
-  alwaysCreate: true,
-)
+@JsonEnum(alwaysCreate: true)
 enum IsoCode {
   AC,
   AD,
@@ -282,4 +279,25 @@ enum IsoCode {
       (final IsoCode iso) => iso.name == name.toUpperCase(),
     );
   }
+}
+
+Iterable<String> get isoCodeEnumValues => _$IsoCodeEnumMap.values;
+Map<IsoCode, String> get isoCodeEnumMap => _$IsoCodeEnumMap;
+String? isoCodeToJson(final IsoCode? isoCode) => isoCodeEnumMap[isoCode];
+
+IsoCode? isoCodeFromJson(final Object? isoCode) {
+  if (isoCode is IsoCode) {
+    return isoCode;
+  }
+  if (isoCode is num) {
+    return IsoCode.values.elementAtOrNull(isoCode.toInt());
+  }
+  if (isoCode is int) {
+    return IsoCode.values.elementAtOrNull(isoCode);
+  }
+  if (isoCode is String) {
+    return IsoCode.byName(isoCode);
+  }
+
+  return null;
 }

@@ -7,11 +7,11 @@ part of 'continent.dart';
 // **************************************************************************
 
 const _$ContinentEnumMap = {
-  Continent.AF: 'Africa',
-  Continent.AN: 'Antarctica',
-  Continent.AS: 'Asia',
-  Continent.EU: 'Europe',
-  Continent.NA: 'North America',
-  Continent.OC: 'Oceania',
-  Continent.SA: 'South America',
+  Continent.AF: 'AF',
+  Continent.AN: 'AN',
+  Continent.AS: 'AS',
+  Continent.EU: 'EU',
+  Continent.NA: 'NA',
+  Continent.OC: 'OC',
+  Continent.SA: 'SA',
 };

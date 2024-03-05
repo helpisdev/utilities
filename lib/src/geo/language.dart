@@ -15,10 +15,7 @@ part 'language.g.dart';
 /// ```dart
 /// Language.EN // English
 /// ```
-@JsonEnum(
-  fieldRename: FieldRename.snake,
-  alwaysCreate: true,
-)
+@JsonEnum(alwaysCreate: true)
 enum Language {
   @JsonValue('af')
   AF(Locale('af')),
@@ -267,11 +264,40 @@ enum Language {
   /// ```
   ///
   /// Returns null if no matching [Language] is found.
-  static Language? byLocale(final dynamic locale) =>
-      Language.values.singleWhereOrNull(
-        (final Language lang) => locale is Locale
-            ? lang.locale == locale
-            : lang.locale.languageCode.toUpperCase() ==
-                locale.toString().toUpperCase(),
-      );
+  static Language? byLocale(final dynamic locale) {
+    for (final Language lang in Language.values) {
+      if (locale is Locale && lang.locale == locale) {
+        return lang;
+      }
+      if (locale is String) {
+        if (lang.name == locale.toUpperCase() ||
+            lang.locale.languageCode.toLowerCase() == locale.toLowerCase() ||
+            lang.locale.countryCode?.toLowerCase() == locale.toLowerCase() ||
+            lang.locale.scriptCode?.toLowerCase() == locale.toLowerCase() ||
+            lang.locale.toString().toLowerCase() == locale.toLowerCase()) {
+          return lang;
+        }
+      }
+    }
+
+    return null;
+  }
+}
+
+Iterable<String> get languageEnumValues => _$LanguageEnumMap.values;
+Map<Language, String> get languageEnumMap => _$LanguageEnumMap;
+String? languageToJson(final Language? language) => languageEnumMap[language];
+
+Language? languageFromJson(final Object? language) {
+  if (language is Language) {
+    return language;
+  }
+  if (language is num) {
+    return Language.values.elementAtOrNull(language.toInt());
+  }
+  if (language is int) {
+    return Language.values.elementAtOrNull(language);
+  }
+
+  return Language.byLocale(language);
 }

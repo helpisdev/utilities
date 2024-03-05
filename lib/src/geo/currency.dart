@@ -170,11 +170,7 @@ part 'currency.g.dart';
 /// - [ZAR] -> South African Rand, symbol: R
 /// - [ZMW] -> Zambian Kwacha, symbol: K
 /// - [ZWD] -> Zimbabwean Dollar, symbol: Z$
-@JsonEnum(
-  valueField: 'fullName',
-  fieldRename: FieldRename.snake,
-  alwaysCreate: true,
-)
+@JsonEnum(alwaysCreate: true)
 enum Currency {
   /// Emirati Dirham, symbol: `د.إ`
   AED(fullName: 'Emirati Dirham', symbol: 'د.إ'),
@@ -677,14 +673,36 @@ enum Currency {
   /// Returns a [Currency] enum value if [representation] matches a currency
   /// [name], [symbol] or [fullName]. Otherwise returns `null`.
   static Currency? of(final dynamic representation) =>
-      Currency.values.firstWhereOrNull(
-        (final Currency cur) =>
-            representation == cur.fullName ||
-            representation == cur.symbol ||
-            representation == cur,
-      );
+      currencyFromJson(representation);
 
   /// [value] is the amount to format. Returns a string with the [symbol] and
   /// [value] formatted according to the currency's locale.
   String format(final dynamic value) => '$symbol $value';
+}
+
+Iterable<String> get currencyEnumValues => _$CurrencyEnumMap.values;
+Map<Currency, String> get currencyEnumMap => _$CurrencyEnumMap;
+String? currencyToJson(final Currency? currency) => currencyEnumMap[currency];
+
+Currency? currencyFromJson(final Object? currency) {
+  if (currency is Currency) {
+    return currency;
+  }
+  if (currency is num) {
+    return Currency.values.elementAtOrNull(currency.toInt());
+  }
+  if (currency is int) {
+    return Currency.values.elementAtOrNull(currency);
+  }
+  if (currency is String) {
+    for (final Currency c in Currency.values) {
+      if (c.name == currency.toUpperCase() ||
+          c.fullName.toLowerCase() == currency.toLowerCase() ||
+          c.symbol.toLowerCase() == currency.toLowerCase()) {
+        return c;
+      }
+    }
+  }
+
+  return null;
 }

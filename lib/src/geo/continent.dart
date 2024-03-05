@@ -15,11 +15,7 @@ part 'continent.g.dart';
 /// [NA] - North America
 /// [OC] - Oceania
 /// [SA] - South America
-@JsonEnum(
-  valueField: 'fullName',
-  fieldRename: FieldRename.snake,
-  alwaysCreate: true,
-)
+@JsonEnum(alwaysCreate: true)
 enum Continent {
   AF('Africa'),
   AN('Antarctica'),
@@ -33,4 +29,31 @@ enum Continent {
 
   /// The full name of the continent.
   final String fullName;
+}
+
+Iterable<String> get continentEnumValues => _$ContinentEnumMap.values;
+Map<Continent, String> get continentEnumMap => _$ContinentEnumMap;
+String? continentToJson(final Continent? continent) =>
+    continentEnumMap[continent];
+
+Continent? continentFromJson(final Object? continent) {
+  if (continent is Continent) {
+    return continent;
+  }
+  if (continent is num) {
+    return Continent.values.elementAtOrNull(continent.toInt());
+  }
+  if (continent is int) {
+    return Continent.values.elementAtOrNull(continent);
+  }
+  if (continent is String) {
+    for (final Continent c in Continent.values) {
+      if (c.name == continent.toUpperCase() ||
+          c.fullName.toLowerCase() == continent.toLowerCase()) {
+        return c;
+      }
+    }
+  }
+
+  return null;
 }
