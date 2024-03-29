@@ -1,4 +1,4 @@
-# melos_managed_dependency_overrides: breakpoints_utilities,context_menu,resizable_text,screen_size_provider,file,intl,material_color_utilities,meta,path,process,pub_updater,web
+# melos_managed_dependency_overrides: breakpoints_utilities,context_menu,resizable_text,screen_size_provider,intl,material_color_utilities,meta
 dependency_overrides:
   breakpoints_utilities:
     path: packages/resizable_text/packages/breakpoints_utilities
@@ -8,11 +8,6 @@ dependency_overrides:
     path: packages/resizable_text
   screen_size_provider:
     path: packages/resizable_text/packages/screen_size_provider
-  file: ^7.0.0
   intl: ^0.19.0
-  material_color_utilities: ^0.8.0
-  meta: ^1.11.0
-  path: ^1.9.0
-  process: ^5.0.1
-  pub_updater: ^0.4.0
-  web: ^0.4.0
+  material_color_utilities: ^0.11.1
+  meta: ^1.12.0
