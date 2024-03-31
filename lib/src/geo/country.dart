@@ -24,7 +24,7 @@ part 'country.g.dart';
 /// - [languages] -> The main languages spoken in the country.
 @JsonEnum(alwaysCreate: true)
 enum Country {
-  @JsonValue('AF')
+  @JsonValue('AC')
   ascensionIsland(
     capital: 'Georgetown',
     nativeName: 'Ascension Island',

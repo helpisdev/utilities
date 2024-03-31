@@ -7,7 +7,7 @@ part of 'country.dart';
 // **************************************************************************
 
 const _$CountryEnumMap = {
-  Country.ascensionIsland: 'AF',
+  Country.ascensionIsland: 'AC',
   Country.andorra: 'AD',
   Country.unitedArabEmirates: 'AE',
   Country.afghanistan: 'AF',
