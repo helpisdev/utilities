@@ -13,7 +13,9 @@ import 'package:shimmer/shimmer.dart';
 ///
 /// Would display 10 shimmering lines.
 class LoadingShimmer extends StatelessWidget {
-  const LoadingShimmer({super.key, this.itemCount = 8});
+  const LoadingShimmer({super.key, this.controller, this.itemCount = 8});
+
+  final ScrollController? controller;
 
   /// Controls the number of shimmering lines displayed.
   final int itemCount;
@@ -29,6 +31,7 @@ class LoadingShimmer extends StatelessWidget {
             prototypeItem: const LoadingIndicator(),
             itemBuilder: (final _, final __) => const LoadingIndicator(),
             itemCount: itemCount,
+            controller: controller,
           ),
         ),
       );
