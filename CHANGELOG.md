@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-04-14
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`utilities` - `v0.13.2`](#utilities---v0132)
+
+---
+
+#### `utilities` - `v0.13.2`
+
+ - **FEAT**(shimmer): Add optional scroll controller. ([ef459294](https://github.com/helpisdev/utilities.git/commit/ef459294a9309d1e20279a96d5435cb2bbc1d4f3))
+
+## 0.13.2
+
+ - **FEAT**(shimmer): Add optional scroll controller. ([ef459294](https://github.com/helpisdev/utilities.git/commit/ef459294a9309d1e20279a96d5435cb2bbc1d4f3))
+
+
 ## 2024-03-31
 
 ### Changes
